@@ -1,25 +1,80 @@
 header.header
     .header__content
-        .header__logo
-            a.logo(href="/")
+        .header__row
+            .header__col
+                .logo
+                    a.logo__link(href="/")
+                        img(src="/img/logo.png", alt="alt")
+
+            .header__col
+                .social
+                    a.social__link(href="#")
+                        i.icon_phone.mobile
+                        .social__number.desktop 
+                            span + 38 099 123 45 67
+                        .social__label.desktop 
+                            span бесплатная консультация по проекту
+
+                    a.social__link(href="#")
+                        i.icon_telegram
+
+                    a.social__link(href="#")
+                        i.icon_whatsapp
+
+            .header__col
+
+                .hamburger
+                    .hamburger__icon
+                    .hamburger__label.desktop 
+                        span меню
+
+                .switch.desktop 
+                    label.switch__label
+                        input(type="checkbox" id="themeCheckbox" name="themeCheckbox")
+                        span
+                            i
+    .header__nav
+        .logo.mobile
+            a.logo__link(href="/")
                 img(src="/img/logo.png", alt="alt")
+        ul.menu
+            li.menu__item
+                a.menu__link(href="#") О проекте
+            li.menu__item
+                a.menu__link(href="#") Презентация комплекса 
+            li.menu__item
+                a.menu__link(href="#") Преимущества проекта
+            li.menu__item
+                a.menu__link(href="#") Выбрать апартамент
+            li.menu__item
+                a.menu__link(href="#") Внутренняя отделка
+            li.menu__item
+                a.menu__link(href="#") Беспроцентная рассрочка
+            li.menu__item
+                a.menu__link(href="#") О локации
+            li.menu__item
+                a.menu__link(href="#") О застройщике
+            li.menu__item
+                a.menu__link(href="#") Новости проекта
 
-        .header__toggle
 
-        .header__nav
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Новости
-                    li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
-                    li.menu-item
-                        a(href="#") Контакты
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню
+        .header__action.mobile
+            a.btn.btn_mask(href="#") Скачать презентацию
+                .btn_img
+                    img(src="../img/btn_mask.png", alt="alt")
+
+            a.btn.btn_info(href="#") Выбрать квартиру
+
+
+        .social.mobile
+            a.social__link(href="#")
+                i.icon_telegram
+
+            a.social__link(href="#")
+                i.icon_whatsapp
+
+            a.social__link(href="#")
+                .social__number 
+                    span + 38 099 123 45 67
+                .social__label 
+                    span бесплатная консультация по проекту

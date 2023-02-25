@@ -39,16 +39,34 @@ function isTouch() {
 $(document).ready(function() {
 
 
-    function openMobileNav() {
-        $('.header__toggle').click(function(event) {
+    function toggleNav() {
+        $('.hamburger').click(function(event) {
             // console.log('Показ меню');
-            $('.navbar').toggleClass('navbar_open');
-            $('.header__toggle').toggleClass('header__toggle_open');
-            // $('.nav_open_bg').toggleClass('nav_open_bg_open');
+            $('.hamburger').toggleClass('hamburger_open');
+            $('.header__nav').toggleClass('header__nav_open');
             $( 'body' ).toggleClass( 'nav-open' );
         });
     };
-    openMobileNav();
+    toggleNav();
+
+    function hideNav() {
+        $(".header__nav").on('mouseenter', function() {
+            // console.log('mouse on');
+            // let wrap = $(this).find('.task__wrap');
+            // wrap.slideDown(300)
+
+        });
+
+        $(".header__nav").on('mouseleave', function() {
+            console.log('mouse of');
+            // let wrap = $(this).find('.task__wrap');
+            // wrap.slideUp(300)
+            // $('.hamburger').removeClass('hamburger_open');
+            // $('.header__nav').removeClass('header__nav_open');
+            // $( 'body' ).removeClass( 'nav-open' );
+        });
+    }
+    hideNav();
 
     $('.modal').on('show.bs.modal', () => {
         let openedModal = $('.modal.in:not(.popapCalc)');
@@ -64,6 +82,8 @@ $(document).ready(function() {
         })
     };
     activeNav();
+
+
 
     function showMore(classItem, btn) {
 
@@ -99,7 +119,7 @@ $(document).ready(function() {
 
 
     });
-    
+
     }
     // showMore('.vacancies__item', '.show_more_v_js');
 
@@ -109,11 +129,13 @@ $(document).ready(function() {
         minimumResultsForSearch: Infinity
     });
 
-    // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
     function stikyMenu() {
-        let HeaderTop = $( 'header' ).offset().top;
-        // let HeaderTop = $( 'header' ).offset().top + $( '.home' ).innerHeight();
+        // let HeaderTop = $( 'header' ).offset().top;
+        let HeaderTop = $( 'header' ).offset().top + $( '.header' ).innerHeight();
         let currentTop = $( window ).scrollTop();
+
+        // console.log(HeaderTop);
+        // console.log(currentTop);
 
         setNavbarPosition();
 
@@ -129,20 +151,6 @@ $(document).ready(function() {
             } else {
                 $( 'header' ).removeClass( 'stiky' );
             }
-
-            // $( '.navbar__link' ).each( function () {
-            //     let section = $( this ).attr( 'href' );
-            //
-            //     if ( $( 'section' ).is( section ) ) {
-            //         let offset = $( section ).offset().top;
-            //
-            //         if ( offset <= currentTop && offset + $( section ).innerHeight() > currentTop ) {
-            //             $( this ).addClass( 'active' );
-            //         } else {
-            //             $( this ).removeClass( 'active' );
-            //         }
-            //     }
-            // } );
         }
     }
     stikyMenu();
@@ -214,8 +222,6 @@ $(document).ready(function() {
     // };
     //
     // console.log(thousandSeparator(700));
-    
+
 })
 // end animate numbers
-
-

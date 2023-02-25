@@ -1,24 +1,36 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Roboto";
-$second_font_family: "Roboto Slab";
-$main_color: #000;
+$main_font_family: "Manrope";
+$second_font_family: "Commissioner";
+
+$main_color: #203040;
 $main_line_height: 1.2;
 $main_font_size: 1em;
 
-$container_width: 80em;
+$container_width: 77.5em;
+/* 1240/16 */
+// 1200
+// 1440
+// fuul 1820
 
 $footer_height: auto;
 
 // Color collection for elements
-$color_primary: #7b8287;
-$color_success: #36a566;
-$color_info: #03a9f4;
-$color_warning: #fca33e;
-$color_danger: #ff1a1a;
-$color_white: #ffffff;
-$color_black: #000;
+$color_info: #162E66;
+$color_warning: #FF835B;
+$color_primary: #F4F5F6;
 
+$color_light_bg: #E3E6EA;
+$color_primary_bg: #F5FAFF;
+
+$color_white: #ffffff;
+$color_black: #000000;
+
+$color_whatsapp: #46AC54;
+$color_telegram: #34AEE4;
+
+$color_success: #46AC54;
+$color_danger: #ff1a1a;
 
 /* Grid */
 /* ======================================================================== */

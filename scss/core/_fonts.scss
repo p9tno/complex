@@ -1,9 +1,10 @@
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Medium', 500, normal);
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Bold', bold, normal);
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Light', 300, normal);
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Regular', normal, normal);
+@include font-face("Commissioner", '../fonts/Commissioner/Commissioner-Bold', bold, normal);
+@include font-face("Commissioner", '../fonts/Commissioner/Commissioner-Medium', 500, normal);
+@include font-face("Commissioner", '../fonts/Commissioner/Commissioner-Regular', normal, normal);
+@include font-face("Commissioner", '../fonts/Commissioner/Commissioner-SemiBold', 600 , normal);
 
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Bold', bold, normal);
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Light', 300, normal);
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Medium', 500, normal);
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Regular', normal, normal);
+@include font-face("Manrope", '../fonts/Manrope/Manrope-Bold', bold , normal);
+@include font-face("Manrope", '../fonts/Manrope/Manrope-Light', 300 , normal);
+@include font-face("Manrope", '../fonts/Manrope/Manrope-Medium', 500 , normal);
+@include font-face("Manrope", '../fonts/Manrope/Manrope-Regular', normal , normal);
+@include font-face("Manrope", '../fonts/Manrope/Manrope-SemiBold', 600 , normal);

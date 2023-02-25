@@ -1,6 +1,53 @@
 footer.footer
     .footer__content
-        p
-        | &copy; 2016 |
-        i.fa.fa-github(aria-hidden='true') &nbsp;
-        a(href='#') View Source
+        .footer__row
+            .footer__col
+                .logo
+                    a.logo__link(href="/")
+                        img(src="/img/logo_light.png", alt="alt")
+            .footer__col
+                ul.menu
+                    .menu__col
+                        li.menu__item
+                            a.menu__link(href="#") О проекте
+                        li.menu__item
+                            a.menu__link(href="#") Презентация комплекса 
+                        li.menu__item
+                            a.menu__link(href="#") Преимущества проекта
+                        li.menu__item
+                            a.menu__link(href="#") Выбрать апартамент
+                        li.menu__item
+                            a.menu__link(href="#") Внутренняя отделка
+                    .menu__col
+                        li.menu__item
+                            a.menu__link(href="#") Беспроцентная рассрочка
+                        li.menu__item
+                            a.menu__link(href="#") О локации
+                        li.menu__item
+                            a.menu__link(href="#") О застройщике
+                        li.menu__item
+                            a.menu__link(href="#") Новости проекта
+
+                .footer__action
+                    a.btn.btn_mask(href="#") Скачать презентацию
+                        .btn_img
+                            img(src="../img/btn_mask.png", alt="alt")
+
+                    a.btn.btn_info(href="#") Выбрать квартиру
+
+            .footer__col
+                .social
+                    a.social__link(href="#")
+
+                        .social__number 
+                            span + 38 099 123 45 67
+                        .social__label 
+                            span бесплатная консультация по проекту
+
+                    a.social__link(href="#")
+                        i.icon_telegram
+
+                    a.social__link(href="#")
+                        i.icon_whatsapp
+                .licence
+                    span Licence N 1234567890
