@@ -6,6 +6,7 @@
 	left: 0;
 	width: 100%;
 	background-color: $color_white;
+	z-index: 5;
 
 	&:before {
 		content: '';
@@ -439,11 +440,11 @@
 
 // stiky menu
 .stiky {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1;
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	// width: 100%;
+	// z-index: 5;
 
 	// -webkit-animation-name: showMenu;
 	// animation-name: showMenu;

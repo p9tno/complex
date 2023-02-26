@@ -61,9 +61,9 @@ $(document).ready(function() {
             console.log('mouse of');
             // let wrap = $(this).find('.task__wrap');
             // wrap.slideUp(300)
-            // $('.hamburger').removeClass('hamburger_open');
-            // $('.header__nav').removeClass('header__nav_open');
-            // $( 'body' ).removeClass( 'nav-open' );
+            $('.hamburger').removeClass('hamburger_open');
+            $('.header__nav').removeClass('header__nav_open');
+            $( 'body' ).removeClass( 'nav-open' );
         });
     }
     hideNav();
@@ -128,6 +128,17 @@ $(document).ready(function() {
         placeholder: $(this).data('placeholder'),
         minimumResultsForSearch: Infinity
     });
+
+    function addDataFancybox() {
+        let item = $('.itemForDataFancybox_js');
+        let num = 0;
+
+        item.each(function(index, el) {
+            $(this).find('a').attr('data-fancybox', num);
+            num++;
+        });
+    }
+    addDataFancybox();
 
     function stikyMenu() {
         // let HeaderTop = $( 'header' ).offset().top;

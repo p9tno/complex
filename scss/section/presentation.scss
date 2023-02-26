@@ -1,0 +1,31 @@
+.presentation {
+    overflow: hidden;
+
+    &__slider {
+
+        @media (max-width: 767px) {
+            margin-top: 2.875em;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 48.25em;
+
+        }
+
+        @media (min-width: 768px) {
+            width: 138.125em;
+        }
+    }
+
+    &__img {
+        width: 15.75em;
+        height: 8.75em;
+
+        @media (min-width: 768px) {
+            width: 22.5em;
+            height: 12.5em;
+
+        }
+    }
+
+}

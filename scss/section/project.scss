@@ -1,0 +1,72 @@
+.project {
+    padding-top: 8.125em;
+
+    &__list {
+        margin-top: 2.25em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin: 0 1.625em 1.875em;
+        @media (min-width: 768px) {
+            margin: 0 4em;
+
+        }
+
+        a,
+        span {
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+        }
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: $main_color;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -0.125em;
+                left: 0;
+                width: 100%;
+                border-bottom: 0.0625em solid;
+                border-color: rgba(#728496, 0.2);
+                transition: 0.3s;
+            }
+        }
+
+    }
+
+    &__img {
+        position: relative;
+        margin: 3em auto 0;
+        width: 100%;
+        height: 15em;
+
+        @media (min-width: 768px) {
+            margin: 5.25em auto 0;
+            width: 113.75em;
+            height: 43.75em;
+        }
+
+        .btn {
+            position: absolute;
+            top: -2.5em;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media (max-width: 767px) {
+                width: 24.5em;
+            }
+        }
+
+    }
+
+}
