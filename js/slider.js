@@ -8,9 +8,9 @@ $(document).ready(function() {
 
         centeredSlides: true,
         loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        autoplay: {
+          delay: 5000,
+        },
 
         freeMode: true,
         watchSlidesProgress: true,
@@ -23,7 +23,7 @@ $(document).ready(function() {
 
         slidesPerView: 3,
         spaceBetween: 8,
-        
+
         breakpoints: {
             768: {
                 slidesPerView: 6,
@@ -33,5 +33,52 @@ $(document).ready(function() {
         }
     });
 
+    const advantage = new Swiper('.advantage_swiper_js', {
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        loop: true,
+        freeMode: true,
+        watchSlidesProgress: true,
+        autoHeight: true,
+
+        mousewheel: {
+            invert: true,
+            forceToAxis: true,
+        },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+
+
+        slidesPerView: 2,
+        spaceBetween: 30,
+
+        breakpoints: {
+            768: {
+                spaceBetween: 270,
+                slidesPerView: 2,
+            },
+
+        }
+    });
+
+    $('.advantage__menu').on('click',  '.advantage__item', function(e) {
+        e.preventDefault();
+        let index = $(this).data('index');
+        // console.log(index);
+        // advantage.slideTo(index);
+        advantage.slideToLoop(index);
+    });
+
+    advantage.on('slideChange', function (e) {
+        let currentSlide = e.realIndex;
+        let currentItem = $('.advantage__menu').find(`[data-index='${currentSlide}']`);
+        $('.advantage__item').removeClass('active');
+        currentItem.addClass('active');
+    });
 
 });

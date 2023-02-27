@@ -106,3 +106,32 @@ body {
 		height: 100%;
 	}
 }
+
+.counter-wrap {
+	counter-reset: line var(--line-num, 0);
+}
+
+.counter-item {
+	counter-increment: line;
+
+	&:nth-child(n+10) {
+		.counter-el {
+			&:before {
+				content: none;
+
+			}
+		}
+	}
+
+	.counter-el {
+		&:before {
+			content: '0';
+
+		}
+
+		&:after {
+			content: counter(line) ' ';
+		}
+
+	}
+}

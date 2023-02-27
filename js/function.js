@@ -207,6 +207,11 @@ $(document).ready(function() {
             }
         }, duration / final );
     }
+    // end animate numbers
+
+    $(function(){
+        $(".tel").mask("+7 999 999 99 99");
+    });
 
 
     // Деление чисел на разряды Например из строки 10000 получаем 10 000
@@ -235,4 +240,3 @@ $(document).ready(function() {
     // console.log(thousandSeparator(700));
 
 })
-// end animate numbers

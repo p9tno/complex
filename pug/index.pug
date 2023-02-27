@@ -56,51 +56,100 @@ block content
 
     // end presentation 
 
-    //- // begin loading
-    //- section#loading.loading.section
-    //-     .container_center
-    //-         .loading__wrap
-    //-             h2.section__title
-    //-                 span.desktop Скачайте подробную<br> презентацию жилого<br> комплекса «Название<br> комплекса»
-    //-                 span.mobile Скачайте подробную<br> презентацию жилого<br> комплекса «Название<br> комплекса»
-    //-             .loading__content
-    //-                 .loading__label
-    //-                     span Вся информация о проекте в одном файле:
-    //-                 .loading__list
-    //-                     each item in ['Полный набор актуальный планировок и цен', 'Описание концепции и истории создания', 'Расчёт инвестиционной привлекательности', 'Особенности комплекса и уникальные преимущества']
-    //-                         .loading__item
-    //-                             span=item
-    //- 
-    //-                 //- .loading__img.img
-    //-                 //-     img(src="../img/loading.webp", alt="alt")
-    //- 
-    //-                 .loading__form
-    //- 
-    //-                     // begin form
-    //-                     .form__content   
-    //-                         form.form(action="send.php")
-    //-                             input(type="hidden" name="subject" value="форма в футоре")
-    //-                             input(type="hidden" name="notspam" value="")
-    //- 
-    //-                             .form__row
-    //-                                 input(type="text", required placeholder="Имя")
-    //-                             .form__row
-    //-                                 input(type="text", required placeholder="+7")
-    //- 
-    //-                             .form__row
-    //-                                 .button
-    //-                                     button.btn.btn_mask(type="submit") Скачать презентацию
-    //-                                         .btn_img
-    //-                                             img(src="../img/btn_mask.png", alt="alt")
-    //-                             .form__row
-    //-                                 span.form__text Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности
-    //- 
-    //-                     // end form
-    //- 
-    //- 
-    //- 
-    //- 
-    //- // end loading
+    // begin loading
+    section#loading.loading.section
+        .container_center
+            .loading__wrap
+                h2.section__title
+                    span.desktop Скачайте подробную<br> презентацию жилого<br> комплекса «Название<br> комплекса»
+                    span.mobile Скачайте подробную<br> презентацию жилого<br> комплекса «Название<br> комплекса»
+                .loading__content
+                    .loading__label
+                        span Вся информация о проекте в одном файле:
+                    .loading__list
+                        each item in ['Полный набор актуальный планировок и цен', 'Описание концепции и истории создания', 'Расчёт инвестиционной привлекательности', 'Особенности комплекса и уникальные преимущества']
+                            .loading__item
+                                span=item
+
+                    .loading__img.img
+                        img(src="../img/loading.webp", alt="alt")
+
+                    .loading__form
+
+                        // begin form
+                        .form__content
+                            .form__label
+                                span pdf • 12мб
+                            form.form(action="send.php")
+                                input(type="hidden" name="subject" value="форма в футоре")
+                                input(type="hidden" name="notspam" value="")
+
+                                .form__row
+                                    input(type="text" placeholder="Имя")
+                                .form__row
+                                    input(type="text" required placeholder="+7").tel
+
+                                .form__row
+                                    .button
+                                        button.btn.btn_mask(type="submit") Скачать презентацию
+                                            .btn_img
+                                                img(src="../img/btn_mask.png", alt="alt")
+                                .form__row.mb_0
+                                    .form__text
+                                        span Нажимая на кнопку вы соглашаетесь с условиями обработки<br> данных и политикой конфиденциальности
+
+                        // end form
+
+
+
+
+    // end loading
+
+    // begin advantage
+    section#advantage.advantage.section
+        .container_center.desktop
+            ul.advantage__menu
+                li.advantage__item(data-index="0").active
+                    a(href="#").advantage__link Преимущество номер один
+                li.advantage__item(data-index="1")
+                    a(href="#").advantage__link Преимущество номер два
+                li.advantage__item(data-index="2")
+                    a(href="#").advantage__link Преимущество номер три
+                li.advantage__item(data-index="3")
+                    a(href="#").advantage__link Преимущество номер четыре
+                li.advantage__item(data-index="4")
+                    a(href="#").advantage__link Преимущество номер пять
+                li.advantage__item(data-index="5")
+                    a(href="#").advantage__link Преимущество номер шесть
+
+        .advantage__slider
+            .swiper.advantage_swiper_js
+                .swiper-wrapper
+                    each item in ['Преимущество<br> номер один','Преимущество номер два','Преимущество номер три','Преимущество номер четыре','Преимущество номер пять','Преимущество номер шесть' ]
+                        .swiper-slide
+                            .advantage__wrap
+                                .advantage__img.img
+                                    img(src="../img/advantage.jpg", alt="alt")
+                                .advantage__content
+                                    .advantage__top
+                                        .advantage__number.desktop
+                                            span 01
+                                        .section__title 
+                                            span!=item
+                                        .section__desc
+                                            p Элитная недвижимость в Дубаи — это возможность приобрести действительно эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса. Вы сможете любоваться видами на море, находясь при этом в тишине и покое.
+                                    .advantage__bottom
+                                        .advantage__info
+                                            span 25
+                                            p метров длина<br>панорамного бассейна
+
+
+                .advantage__arrows
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+
+    // end advantage
 
     // begin testButton
     //- section#testButton.testButton.section

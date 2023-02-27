@@ -1,27 +1,41 @@
 .loading {
+    overflow: hidden;
+
     .section__title {
         text-align: left;
+        @media (max-width: 767px) {
+            margin-bottom: 1.125em;
+        }
     }
-    padding-top: 12.5em;
     position: relative;
+
+    @media (min-width: 768px) {
+        padding-top: 12.5em;
+    }
 
     &:before {
         content: '';
         position: absolute;
-        top: 6em;
         left: 50%;
         transform: translateX(-50%);
-        width: 90em;
-        height: 50em;
         background-color: $color_primary_bg;
+
+        top: -2.5em;
+        width: 22.5em;
+        height: 38.125em;
+        @media (min-width: 768px) {
+            top: 6em;
+            width: 90em;
+            height: 50em;
+        }
     }
 
     &__wrap {
         position: relative;
         z-index: 1;
-        border: 1px solid #000;
 
         @media (min-width: 768px) {
+            padding-bottom: 7.5em;
             display: flex;
             justify-content: space-between;
 
@@ -29,30 +43,137 @@
 
     }
 
-    &__content {}
+    &__content {
+        position: relative;
+        @media (min-width: 768px) {
+            width: 35em;
+        }
+    }
 
     &__label {
-        margin-bottom: 1.375em;
-        /* 22/16 */
+        margin-bottom: 1.25em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.375em;
+
+        }
+
         span {
-            font-weight: 600;
-            font-size: 1.5em;
+            font-weight: 500;
+            font-size: 0.875em;
+
+            @media (min-width: 768px) {
+                font-weight: 600;
+                font-size: 1.5em;
+            }
+
         }
     }
 
     &__list {
+        margin-bottom: 11em;
+        padding-left: 0.75em;
         columns: 2;
-        column-gap: 1em;
+        column-gap: 2em;
+        @media (min-width: 768px) {
+            margin-bottom: 15.25em;
+            column-gap: 1em;
+            padding-left: 1.25em;
+        }
     }
 
-    &__item {}
+    &__item {
+        position: relative;
+        line-height: 1;
+        margin-bottom: 1em;
+        @media (min-width: 768px) {
+            line-height: 1.334;
+            margin-bottom: 1.875em;
+        }
 
-    &__img {}
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0.6em;
+            left: -1.25em;
+
+            width: 0.375em;
+            height: 0.375em;
+            border-radius: 100%;
+            background-color: #E17D5D;
+            font-size: 0.667em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+
+        }
+
+        span {
+            font-size: 0.6875em;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        // top: 10em;
+        bottom: 51em;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.3em;
+
+        @media (min-width: 768px) {
+            font-size: 1em;
+            // top: 11em;
+            bottom: -8em;
+            left: -48em;
+            transform: none;
+
+        }
+
+        width: 87.5em;
+        height: 53.75em;
+    }
 
     &__form {
         @media (min-width: 768px) {
             width: 28.75em;
-            /* 460/16 */
+            margin-left: 1em;
+        }
+
+        .form__content {
+            position: relative;
+        }
+
+        .form__label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.875em;
+            background-color: #162E66;
+            color: $color_white;
+            letter-spacing: 0.02em;
+
+            position: absolute;
+            top: -2.1875em;
+            right: 0;
+            width: 5em;
+            height: 2.1875em;
+            @media (min-width: 768px) {
+                top: -1em;
+                right: -3em;
+                width: 5.9375em;
+                height: 3.125em;
+            }
+
+            span {
+                font-size: 0.625em;
+                font-weight: 700;
+            }
+
         }
     }
 
