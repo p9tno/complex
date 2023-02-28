@@ -2,10 +2,7 @@ $(document).ready(function() {
 
 
     const presentation = new Swiper('.presentation_swiper_js', {
-
-
         speed: 500,
-
         centeredSlides: true,
         loop: true,
         autoplay: {
@@ -35,12 +32,11 @@ $(document).ready(function() {
 
     const advantage = new Swiper('.advantage_swiper_js', {
         speed: 500,
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        autoplay: {
+          delay: 5000,
+        },
         loop: true,
-        freeMode: true,
-        watchSlidesProgress: true,
+
         autoHeight: true,
 
         mousewheel: {
@@ -61,6 +57,8 @@ $(document).ready(function() {
             768: {
                 spaceBetween: 270,
                 slidesPerView: 2,
+                freeMode: true,
+                watchSlidesProgress: true,
             },
 
         }

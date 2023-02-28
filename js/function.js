@@ -126,7 +126,10 @@ $(document).ready(function() {
 
     $('.select').select2({
         placeholder: $(this).data('placeholder'),
-        minimumResultsForSearch: Infinity
+        minimumResultsForSearch: Infinity,
+        dropdownPosition: 'below'
+        // closeOnSelect: false
+        // dropdownAutoWidth: false,
     });
 
     function addDataFancybox() {

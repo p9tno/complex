@@ -165,6 +165,23 @@
 
 		&--open {
 			z-index: 1050;
+
+			.select2-container--default .select2-selection {
+				background: $color_info!important;
+
+			}
+
+			.select2 {
+				.select2-container--default .select2-selection {
+					background: $color_info;
+
+				}
+
+				&-selection {
+					background: $color_info;
+				}
+
+			}
 		}
 
 		&--default {
@@ -177,18 +194,20 @@
 					}
 
 					&__option {
-						padding: 0.971em 1.175em;
+						padding: 1em 5em 1em 2em;
 						cursor: pointer;
-						color: rgba(29, 29, 27, 0.5);
+						color: #728496;
+						font-size: 0.625em;
+						font-weight: 600;
+						transition: 0.3s;
+						letter-spacing: 0.02em;
 
 						&--highlighted[aria-selected] {
-							background: rgba(0, 110, 255, 0.19);
-							color: rgba(29, 29, 27, 0.6);
+							color: $main_color;
 						}
 
 						&--selected {
-							background: rgba(0, 110, 255, 0.19);
-							color: $main_color;
+							color: rgba(114, 132, 150, 0.5);
 						}
 					}
 				}
@@ -196,12 +215,31 @@
 				&-dropdown {
 					position: absolute;
 					// z-index: 150;
-					background-color: #fff;
+					background-color: $color_white;
 					border-radius: 0;
 					margin-top: 0;
-					border: 1px solid #DBDBDB;
+					border: 0.0625em solid rgba(#728496 , 0.2);
 					border-top: 0;
-					box-shadow: 0 2.1875em 4.6875em rgba(128, 125, 125, 0.15);
+					border-bottom-left-radius: 1em;
+					border-bottom-right-radius: 1em;
+
+					&:after,
+					&:before {
+						content: '';
+						position: absolute;
+						top: -1.5625em;
+						height: 1.5625em;
+					}
+
+					&:before {
+						left: -0.0625em;
+						border-left: 0.0625em solid rgba(#728496 , 0.2);
+					}
+
+					&:after {
+						right: -0.0625em;
+						border-right: 0.0625em solid rgba(#728496 , 0.2);
+					}
 
 					&--below {}
 
@@ -209,34 +247,30 @@
 				}
 
 				&-selection {
-					background: #FFFFFF;
-					border: 1px solid #DBDBDB;
+					background: $color_white;
+					border: 0.0625em solid rgba(#728496 , 0.2);
 					font-family: $main_font_family;
-					color: $input_color;
-					// padding: 0.971em 1.175em;
-					padding: 0.65em 1em;
+					color: $main_color;
+					padding: 1.9em 5em 1.9em 2em;
 					outline: none;
-					font-weight: 400;
-					// border-radius: 0;
-					border-radius: 0.3125em;
+					font-weight: 600;
+					font-size: 0.625em;
+					border-radius: 10em;
 					transition: 0.3s;
-					transition-property: color background border;
 					width: 100%;
+					// width: 16.1em;
 					height: auto;
 					position: relative;
-
-					@media (min-width: 768px) {
-						font-size: 1em;
-					}
+					letter-spacing: 0.02em;
 
 					&:hover {
-						border-color: $input_hover_border_color;
-						background-color: transparentize($input_hover_bg_color, 0.9);
+						// border-color: $input_hover_border_color;
+						// background-color: transparentize($input_hover_bg_color, 0.9);
 					}
 
 					&:focus {
-						border-color: $input_focus_border_color;
-						background-color: transparentize($input_hover_bg_color, 0.9);
+						// border-color: $input_focus_border_color;
+						// background-color: transparentize($input_hover_bg_color, 0.9);
 					}
 
 					&--single {
@@ -244,12 +278,12 @@
 							&-selection {
 								&__rendered {
 									line-height: 1;
-									padding: 0 1em 0 0;
-									color: $input_color;
+									// padding: 0 1em 0 0;
+									// color: $input_color;
 								}
 
 								&__placeholder {
-									color: $input_placeholder_color;
+									color: $main_color;
 									overflow: hidden;
 									white-space: nowrap;
 									text-overflow: ellipsis;
@@ -263,41 +297,22 @@
 									top: 0;
 									right: 0;
 									height: 100%;
-									width: 2.5em;
+									width: 5em;
 									padding-bottom: 0.3em;
 
-									.form__date & {
-										padding-bottom: 0;
+									&:before {
+										display: block;
+										content: '\e900';
+										font-family: 'icon';
+										color: $color_info;
+										font-size: 0.75em;
+										transform: translateY(0.25em)scale(1);
+										transition: 0.3s;
 
-										&:before {
-											content: '';
-											display: block;
-											border: 0;
-											width: 0.6em;
-											height: 0.6em;
-											border-right: 2px solid rgba(29, 29, 27, 0.5);
-											border-bottom: 2px solid rgba(29, 29, 27, 0.5);
-											transform: rotate(-135deg);
-											margin-bottom: 0.5em;
-										}
-
-										b {
-											margin-top: 0.5em;
-										}
 									}
 
 									b {
-										// rgba(29, 29, 27, 0.5);
-										// position: static;
-										left: auto;
-										top: auto;
-										margin: auto;
-										border: 0;
-										width: 0.6em;
-										height: 0.6em;
-										border-right: 2px solid rgba(29, 29, 27, 0.5);
-										border-bottom: 2px solid rgba(29, 29, 27, 0.5);
-										transform: rotate(45deg);
+										display: none;
 									}
 								}
 							}
@@ -310,57 +325,53 @@
 				&--open {
 					z-index: 1050;
 
+					.select2 {
+						&-selection {
+							background: $color_info;
+							color: $color_white;
+							border: 0.0625em solid rgba($color_info , 1);
+						}
+
+					}
+
 					.select2-selection--single .select2-selection__arrow {
 						padding-bottom: 0;
 
-						b {
-							border: 0;
-							width: 0.6em;
-							height: 0.6em;
-							border-right: 2px solid rgba(29, 29, 27, 0.5);
-							border-bottom: 2px solid rgba(29, 29, 27, 0.5);
-							transform: rotate(-135deg);
-
-						}
-
-						.form__date & {
-							// padding-bottom: 0.3em;
-
-							b {
-								transform: rotate(45deg);
-							}
+						&:before {
+							transform: translateY(0)scale(-1);
+							color: $color_white;
 						}
 
 					}
 				}
 
-				&--disabled {
-					.select2 {
-						&-selection {
-							background: #FFFFFF;
-							border: 1px solid #DBDBDB;
-							font-family: $main_font_family;
-							color: $input_color;
-							padding: 0.971em 1.175em;
-							outline: none;
-							font-weight: 400;
-							border-radius: 0;
-							transition: 0.3s;
-							transition-property: color background border;
-							width: 100%;
-							height: auto;
-							position: relative;
-
-							&--single {
-								background: #FFFFFF;
-							}
-
-							&__rendered {
-								color: rgba(29, 29, 27, 0.5);
-							}
-						}
-					}
-				}
+				// &--disabled {
+				// 	.select2 {
+				// 		&-selection {
+				// 			background: #FFFFFF;
+				// 			border: 1px solid #DBDBDB;
+				// 			font-family: $main_font_family;
+				// 			color: $input_color;
+				// 			padding: 0.971em 1.175em;
+				// 			outline: none;
+				// 			font-weight: 400;
+				// 			border-radius: 0;
+				// 			transition: 0.3s;
+				// 			transition-property: color background border;
+				// 			width: 100%;
+				// 			height: auto;
+				// 			position: relative;
+				//
+				// 			&--single {
+				// 				background: #FFFFFF;
+				// 			}
+				//
+				// 			&__rendered {
+				// 				color: rgba(29, 29, 27, 0.5);
+				// 			}
+				// 		}
+				// 	}
+				// }
 			}
 		}
 	}

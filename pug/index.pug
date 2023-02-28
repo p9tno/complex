@@ -151,6 +151,73 @@ block content
 
     // end advantage
 
+    // begin apartments
+    section#apartments.apartments.section
+        .container_center
+
+            .apartments__filter
+                .filter#filter
+                    .filter__wrap
+                        h2.section__title
+                            span Выбрать квартиру
+                        .filter__nav
+                            ul.filter__list
+                                .filter__label
+                                    span Количество спален
+                                each item in ['1','2','3','4+']
+                                    li.filter__checkbox
+                                        input(type="checkbox" value="apartments-"+item+"" id="apartments_"+item+"")
+                                        label(for="apartments_"+item+"")
+                                            span=item
+
+                            .filter__select
+                                select.select(name="select" data-placeholder="По популярности")
+                                    option(value="")
+                                    option(value="default" selected="selected") По популярности
+                                    option(value="top") По возрастанию
+                                    option(value="bottom") По убыванию
+
+            .apartments__grid
+                each item in ['','','','','','',]
+
+                    a(href="#").apartments__item
+                        .apartments__img.img
+                            img(src="../img/apartment.webp", alt="alt")
+                        .apartments__content
+                            .apartments__title
+                                span 1-спальные апартаменты
+
+                            .apartments__row
+                                .apartments__col
+                                    span 64,5
+                                    span  м2
+                                .apartments__col
+                                    span 110
+                                    span  фт2
+
+                            .apartments__row
+                                .apartments__col
+                                    span от 540 000 AED
+                                .apartments__col
+                                    span от $175 000
+
+                            .apartments__more
+                                i.icon_info
+                                span Узнать подробнее
+
+
+            .apartments__showmore
+                a.showmore__link(href="#")
+                    span Показать ещё
+
+
+
+
+
+
+
+    // end apartments
+
     // begin testButton
     //- section#testButton.testButton.section
     //-     .container_center
