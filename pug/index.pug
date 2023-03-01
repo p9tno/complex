@@ -178,28 +178,28 @@ block content
                                     option(value="bottom") По убыванию
 
             .apartments__grid
-                each item in ['','','','','','',]
+                each item in ['1-спальные апартаменты','2-спальные апартаменты','3-спальные апартаменты','4-спальные апартаменты','5-спальные апартаменты','6-спальные апартаменты',]
 
-                    a(href="#").apartments__item
+                    a(href="#thisApartment").apartments__item.show_js
                         .apartments__img.img
-                            img(src="../img/apartment.webp", alt="alt")
+                            img(src="../img/apartment.webp", data-src="../img/apartment.webp" alt="alt")
                         .apartments__content
                             .apartments__title
-                                span 1-спальные апартаменты
+                                span(data-title=""+item+"")=item
 
                             .apartments__row
                                 .apartments__col
-                                    span 64,5
+                                    span(data-m2="64,5").m2_js 64,5
                                     span  м2
                                 .apartments__col
-                                    span 110
+                                    span(data-ft="110").ft_js 110
                                     span  фт2
 
                             .apartments__row
                                 .apartments__col
-                                    span от 540 000 AED
+                                    span(data-aed="от 540 000 AED").aed_js от 540 000 AED
                                 .apartments__col
-                                    span от $175 000
+                                    span(data-dollar="от $175 000").dollar_js от $175 000
 
                             .apartments__more
                                 i.icon_info
@@ -210,13 +210,297 @@ block content
                 a.showmore__link(href="#")
                     span Показать ещё
 
-
-
-
-
-
-
     // end apartments
+
+    // Begin Modal thisApartment
+    .modal.fade.thisApartment#thisApartment
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                    i.icon_close
+                .modal-body
+                    .thisApartment__content
+                        .thisApartment__left.desktop
+                            .section__title
+                                span Узнайте подробнее<br> об этих апартаментах
+                            .apartments__item
+                                .apartments__img.img
+                                    img(src="../img/apartment.webp", alt="alt").modal_src_js
+                                .apartments__content
+                                    .apartments__title
+                                        span.modal_title_js 
+
+                                    .apartments__row
+                                        .apartments__col
+                                            span.modal_m2_js
+                                            span  м2
+                                        .apartments__col
+                                            span.modal_ft_js
+                                            span  фт2
+
+                                    .apartments__row
+                                        .apartments__col
+                                            span.modal_aed_js
+                                        .apartments__col
+                                            span.modal_dollar_js
+
+
+
+                        .thisApartment__right
+                            .section__title.mobile
+                                span Узнайте подробнее<br> об этих апартаментах
+                            .section__desc.mobile
+                                p Оставьте свои контактные данные,<br> и менеджер проекта свяжется с вами
+                            .thisApartment__form
+                                // begin form
+                                .form__content
+                                    .form__title.desktop
+                                        span Оставьте свои контактные данные, и менеджер проекта свяжется с вами
+                                    form.form(action="send.php")
+                                        input(type="hidden" name="subject" value="форма в футоре")
+                                        input(type="hidden" name="notspam" value="")
+
+                                        .form__row
+                                            input(type="text" placeholder="Имя")
+                                        .form__row
+                                            input(type="text" required placeholder="+7").tel
+                                        .form__row    
+                                            .form__messenger
+                                                .messenger__title
+                                                    span или задайте свой вопрос в мессенджере онлайн
+                                                .messenger__list
+                                                    a.messenger__link.messenger__link_whatsapp(href="#") Whatsapp
+                                                    a.messenger__link.messenger__link_telegram(href="#") Telegram
+
+
+                                        .form__row
+                                            .button
+                                                button.btn(type="submit") Отправить заявку
+
+                                        .form__row.mb_0
+                                            .form__text
+                                                span Нажимая на кнопку вы соглашаетесь с условиями обработки<br> данных и политикой конфиденциальности
+
+                                // end form
+
+
+
+    // End modal thisApartment
+
+    // begin feedback
+    section.feedback.section
+        .container_center
+            .feedback__content
+                h2.section__title
+                    span Заинтересовал один<br>из предложенных лотов?
+                .section__desc
+                    p Оставьте свои контактные данные, и мы свяжемся с вами,<br> чтобы рассказать подробнее о выбранном лоте и помочь<br> оформить бронирование по актуальной стоимости
+
+                .manager.mobile
+                    .manager__content
+                        .manager__img.img
+                            img(src="../img/manager.webp", alt="alt")
+
+                        .manager__info
+                            .manager__name
+                                span Анна
+                            .manager__desc
+                                span менеджер проекта<br>«Название проекта»
+                    .manager__masc.img
+                        img(src="../img/phone.webp", alt="alt")
+
+
+                .feedback__form
+                    // begin form
+                    .form__content
+                        form.form.form_grid(action="send.php")
+                            input(type="hidden" name="subject" value="форма в футоре")
+                            input(type="hidden" name="notspam" value="")
+
+                            .form__row
+                                input(type="text" placeholder="Имя")
+                            .form__row
+                                input(type="text" required placeholder="+7").tel
+                            .form__row
+                                .button
+                                    button.btn(type="submit") Отправить заявку
+                            .form__row    
+                                .form__messenger
+                                    .messenger__title
+                                        span или задайте свой вопрос в мессенджере онлайн
+                                    .messenger__list
+                                        a.messenger__link.messenger__link_whatsapp(href="#") Whatsapp
+                                        a.messenger__link.messenger__link_telegram(href="#") Telegram
+
+                            .form__row.form__row_full.mb_0
+                                .form__text
+                                    span Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности
+
+                    // end form
+
+
+            .feedback__img.img.desktop
+                img(src="../img/feedback.webp", alt="alt")
+
+
+    // end feedback
+
+    // begin decoration
+    section#decoration.decoration.section
+        .container_center
+
+            .decoration__row
+                .decoration__img.img
+                    img(src="../img/decoration.jpg", alt="alt")
+                .decoration__content
+                    .section__title
+                        span Заголовок номер один про отделку
+                    .section__desc
+                        p Элитная недвижимость в Дубаи — это возможность приобрести действительно эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса. Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни услугам, включая рестораны, магазины, развлекательные центры и многое другое.
+                        p Все элитные дома в Дубае отличаются безупречным качеством, а также высоким уровнем комфорта.
+
+            .decoration__row
+                .decoration__img.img
+                    img(src="../img/decoration_sm.jpg", alt="alt")
+                .decoration__content
+                    .section__desc
+                        p Элитная недвижимость в Дубаи — это возможность приобрести действительно эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса. Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни услугам, включая рестораны, магазины, развлекательные центры и многое другое.
+
+
+
+    // end decoration
+
+    // begin payment
+    section#payment.payment.section
+        .container_center
+            .payment__top
+                h2.section__title
+                    span Беспроцентная рассрочка платежей на весь срок строительства
+
+                .percent
+                    .percent__list
+                        .percent__item
+                            .percent__number
+                                span 60
+                            .percent__desc
+                                span в течение <br>строительства
+                        .percent__item
+                            .percent__number
+                                span 40
+                            .percent__desc
+                                span при сдаче<br>комплекса
+            .payment__bottom
+
+                .table
+                    .table__head
+                        .table__row
+                            each item in ['Взнос', 'Дата платежа', 'Сумма' ]
+                                .table__col
+                                    span=item
+                    .table__body
+
+                        .table__row
+                            .table__col
+                                span При бронировании
+                            .table__col
+                                span В день бронирования
+                            .table__col
+                                span 20%
+
+                        each item in ['', '', '', '', '', '', '', ]
+
+
+                            .table__row
+                                .table__col
+                                    span 2 взнос
+                                .table__col
+                                    span 15 марта 2023
+                                .table__col
+                                    span 10%
+
+                .payment__form
+                    // begin form
+                    .form__content
+                        .form__title
+                            span Узнайте подробнее об условиях рассрочки и возможности поэтапной оплаты
+                        form.form(action="send.php")
+                            input(type="hidden" name="subject" value="форма в футоре")
+                            input(type="hidden" name="notspam" value="")
+
+                            .form__row
+                                input(type="text" placeholder="Имя")
+                            .form__row
+                                input(type="text" required placeholder="+7").tel
+
+                            .form__row
+                                .button
+                                    button.btn(type="submit") Узнать подробнее
+
+                            .form__row.mb_0
+                                .form__text
+                                    span Нажимая на кнопку вы соглашаетесь с условиями обработки<br> данных и политикой конфиденциальности
+
+                    // end form
+
+
+    // end payment
+
+    //- // begin feedback
+    //- section.feedback.section
+    //-     .container_center
+    //-         .feedback__content
+    //-             h2.section__title
+    //-                 span Остались вопросы по проекту?
+    //-             .section__desc
+    //-                 p Оставьте свои контактные данные, и мы свяжемся <br> с вами, чтобы ответить на ваши вопросы
+    //- 
+    //-             .manager.mobile
+    //-                 .manager__content
+    //-                     .manager__img.img
+    //-                         img(src="../img/manager.webp", alt="alt")
+    //- 
+    //-                     .manager__info
+    //-                         .manager__name
+    //-                             span Анна
+    //-                         .manager__desc
+    //-                             span менеджер проекта<br>«Название проекта»
+    //-                 .manager__masc.img
+    //-                     img(src="../img/phone.webp", alt="alt")
+    //- 
+    //- 
+    //-             .feedback__form
+    //-                 // begin form
+    //-                 .form__content
+    //-                     form.form.form_grid(action="send.php")
+    //-                         input(type="hidden" name="subject" value="форма в футоре")
+    //-                         input(type="hidden" name="notspam" value="")
+    //- 
+    //-                         .form__row
+    //-                             input(type="text" placeholder="Имя")
+    //-                         .form__row
+    //-                             input(type="text" required placeholder="+7").tel
+    //-                         .form__row
+    //-                             .button
+    //-                                 button.btn(type="submit") Отправить заявку
+    //-                         .form__row    
+    //-                             .form__messenger
+    //-                                 .messenger__title
+    //-                                     span или задайте свой вопрос в мессенджере онлайн
+    //-                                 .messenger__list
+    //-                                     a.messenger__link.messenger__link_whatsapp(href="#") Whatsapp
+    //-                                     a.messenger__link.messenger__link_telegram(href="#") Telegram
+    //- 
+    //-                         .form__row.form__row_full.mb_0
+    //-                             .form__text
+    //-                                 span Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности
+    //- 
+    //-                 // end form
+    //- 
+    //- 
+    //-         .feedback__img.img.desktop
+    //-             img(src="../img/feedback.webp", alt="alt")
+    //- 
+    //- // end feedback
 
     // begin testButton
     //- section#testButton.testButton.section

@@ -68,6 +68,50 @@ $(document).ready(function() {
     }
     hideNav();
 
+    function showModal() {
+        $('.show_js').on('click', function (e) {
+            e.preventDefault();
+            let id  = $(this).attr('href');
+            $(id).modal('show');
+
+            let item = $(this);
+            let src = item.find('img').attr('data-src');
+            let title = item.find('.apartments__title span').attr('data-title');
+            let m2 = item.find('.m2_js').attr('data-m2');
+            let ft = item.find('.ft_js').attr('data-ft');
+            let aed = item.find('.aed_js').attr('data-aed');
+            let dollar = item.find('.dollar_js').attr('data-dollar');
+            console.log(src);
+
+
+            let modal_src_js = $('.modal_src_js');
+            let modal_title_js = $('.modal_title_js');
+            let modal_m2_js = $('.modal_m2_js');
+            let modal_ft_js = $('.modal_ft_js');
+            let modal_aed_js = $('.modal_aed_js');
+            let modal_dollar_js = $('.modal_dollar_js');
+
+            modal_src_js.attr("src", src);
+            modal_title_js.text(title);
+            modal_m2_js.text(m2);
+            modal_ft_js.text(ft);
+            modal_aed_js.text(aed);
+            modal_dollar_js.text(dollar);
+
+
+            $("#thisApartment").on('hide.bs.modal', function () {
+                modal_src_js.attr("src", '');
+                modal_title_js.html('');
+                modal_m2_js.html('');
+                modal_ft_js.html('');
+                modal_aed_js.html('');
+                modal_dollar_js.html('');
+            });
+
+        });
+    }
+    showModal();
+
     $('.modal').on('show.bs.modal', () => {
         let openedModal = $('.modal.in:not(.popapCalc)');
         if (openedModal.length > 0) {
@@ -75,13 +119,13 @@ $(document).ready(function() {
         }
     });
 
-    function activeNav() {
-        $('.menu-item').on('click', function() {
-            $('.menu-item').removeClass('current-menu-item');
-            $(this).addClass('current-menu-item');
-        })
-    };
-    activeNav();
+    // function activeNav() {
+    //     $('.menu-item').on('click', function() {
+    //         $('.menu-item').removeClass('current-menu-item');
+    //         $(this).addClass('current-menu-item');
+    //     })
+    // };
+    // activeNav();
 
 
 

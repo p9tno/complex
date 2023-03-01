@@ -1,0 +1,136 @@
+.feedback {
+    .section__desc,
+    .section__title {
+        @media (max-width: 767px) {
+            text-align: left;
+        }
+    }
+
+    position: relative;
+    background-color: $color_primary_bg;
+
+    @media (min-width: 768px) {
+        background-color: inherit;
+        padding-top: 5.3125em;
+        padding-bottom: 6.875em;
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            width: 50em;
+            margin-left: auto;
+        }
+    }
+
+    &__form {
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+        }
+
+        .form__content {
+            @media (min-width: 768px) {
+                padding: 3.4375em 3.125em 2.8125em;
+            }
+        }
+
+        .form__row {
+            @media (min-width: 768px) {
+                position: relative;
+                z-index: 1;
+
+            }
+        }
+
+        .form__text {
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__img {
+            position: absolute;
+            bottom: 0;
+            left: 20em;
+            width: 28.75em;
+            height: 43.75em;
+        }
+
+    }
+
+    .manager {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__content {
+            display: flex;
+            align-items: center;
+        }
+
+        &__img {
+            position: relative;
+            flex: none;
+            width: 3.75em;
+            height: 3.75em;
+            border-radius: 100%;
+            margin-right: 0.9375em;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0.125em;
+                /* 2/16 */
+                left: 0.125em;
+                /* 2/16 */
+
+                width: 0.75em;
+                /* 12/16 */
+                height: 0.75em;
+                border-radius: 100%;
+
+                background-color: #31C876;
+                border: 0.125em solid #F7FAFD;
+                /* 2/16 */
+            }
+
+            .manager__circle {
+                position: absolute;
+                top: 2em;
+                left: 2em;
+
+                width: 0.75em;
+                /* 12/16 */
+                height: 0.75em;
+                border-radius: 100%;
+
+                background-color: #31C876;
+                border: 2px solid #F7FAFD;
+            }
+        }
+
+        &__info {}
+
+        &__name {
+            span {
+                font-size: 0.875em;
+            }
+        }
+
+        &__desc {
+            line-height: 0.85;
+
+            span {
+                font-size: 0.625em;
+            }
+        }
+
+        &__masc {
+            flex: none;
+            width: 5.625em;
+            height: 6.875em;
+            margin-right: 1em;
+        }
+    }
+
+}

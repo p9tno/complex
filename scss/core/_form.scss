@@ -4,24 +4,25 @@
 			left: -1.5em;
 		}
 	}
-	// &_grid {
-	// 	display: flex;
-	// 	flex-wrap: wrap;
-	// 	margin: 0 -1em;
-	//
-	// 	.form__row {
-	// 		margin: 0 1em 2em;
-	// 		width: 100%;
-	//
-	// 		@media (min-width: 768px) {
-	// 			width: calc(50% - 2em);
-	// 		}
-	//
-	// 		&_full {
-	// 			width: 100%;
-	// 		}
-	// 	}
-	// }
+
+	&_grid {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1em;
+
+		.form__row {
+			margin: 0 0.625em 1.25em;
+			width: 100%;
+
+			@media (min-width: 768px) {
+				width: calc(50% - 1.25em);
+			}
+
+			&_full {
+				width: 100%;
+			}
+		}
+	}
 
 	&__content {
 		background: $color_white;
@@ -37,7 +38,11 @@
 	}
 
 	&__row {
-		margin-bottom: 1.25em;
+		margin-bottom: 0.9375em;
+		@media (min-width: 768px) {
+			margin-bottom: 1.25em;
+
+		}
 
 		.btn,
 		input:not([type]),
@@ -64,12 +69,103 @@
 
 	}
 
-	&__text {
-		line-height: 1;
+	&__title {
+		line-height: 1.334;
+		margin-bottom: 1.875em;
 
 		span {
-			font-size: 0.625em;
+			font-size: 1.125em;
+		}
+	}
+
+	&__text {
+		line-height: 0.7;
+		text-align: center;
+		@media (min-width: 768px) {
+			line-height: 1;
+			text-align: left;
+		}
+
+		span {
 			color: rgba(#728496, 0.5);
+			font-size: 0.5625em;
+			@media (min-width: 768px) {
+				font-size: 0.625em;
+
+			}
+		}
+	}
+
+	&__messenger {
+		.messenger__title {
+			text-align: center;
+			margin-bottom: 0.9375em;
+
+			span {
+				font-size: 0.75em;
+			}
+		}
+
+		.messenger__list {
+			display: flex;
+
+		}
+
+		.messenger__link {
+			&:first-child {
+				margin-right: 0.5625em;
+			}
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			font-size: 0.75em;
+			font-weight: 600;
+
+			border: 0.0625em solid;
+			border-radius: 6.25em;
+			width: 100%;
+			text-decoration: none;
+			transition: 0.3s;
+
+			padding: 0.75em 2em 0.75em 1.5em;
+			@media (min-width: 768px) {
+				padding: 0.75em 3.75em 0.75em 1.5em;
+
+			}
+
+			&:before {
+				font-family: 'icon';
+				font-size: 1.25em;
+			}
+
+			&_whatsapp {
+				color: $color_whatsapp;
+				background-color: transparent;
+
+				&:before {
+					content: '\e90a';
+				}
+
+				&:hover {
+					color: $color_white;
+					background-color: $color_whatsapp;
+				}
+			}
+
+			&_telegram {
+				color: $color_telegram;
+
+				&:before {
+					content: '\e909';
+				}
+
+				&:hover {
+					color: $color_white;
+					background-color: $color_telegram;
+				}
+			}
 		}
 	}
 
@@ -122,6 +218,7 @@
 		// Placeholder for input +++++++++++++++
 		@include placeholder {
 			color: rgba($main_color,0.2);
+			transition: 0.3s;
 		}
 	}
 	//
@@ -251,7 +348,6 @@
 					border: 0.0625em solid rgba(#728496 , 0.2);
 					font-family: $main_font_family;
 					color: $main_color;
-					padding: 1.9em 5em 1.9em 2em;
 					outline: none;
 					font-weight: 600;
 					font-size: 0.625em;
@@ -262,6 +358,11 @@
 					height: auto;
 					position: relative;
 					letter-spacing: 0.02em;
+					padding: 1.4em 5em 1.4em 2em;
+					@media (min-width: 768px) {
+						padding: 1.9em 5em 1.9em 2em;
+
+					}
 
 					&:hover {
 						// border-color: $input_hover_border_color;
