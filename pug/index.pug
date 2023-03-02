@@ -283,8 +283,6 @@ block content
 
                                 // end form
 
-
-
     // End modal thisApartment
 
     // begin feedback
@@ -342,7 +340,6 @@ block content
             .feedback__img.img.desktop
                 img(src="../img/feedback.webp", alt="alt")
 
-
     // end feedback
 
     // begin decoration
@@ -366,8 +363,6 @@ block content
                     .section__desc
                         p Элитная недвижимость в Дубаи — это возможность приобрести действительно эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса. Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни услугам, включая рестораны, магазины, развлекательные центры и многое другое.
 
-
-
     // end decoration
 
     // begin payment
@@ -376,7 +371,6 @@ block content
             .payment__top
                 h2.section__title
                     span Беспроцентная рассрочка платежей на весь срок строительства
-
                 .percent
                     .percent__list
                         .percent__item
@@ -390,39 +384,39 @@ block content
                             .percent__desc
                                 span при сдаче<br>комплекса
             .payment__bottom
-
-                .table
-                    .table__head
-                        .table__row
-                            each item in ['Взнос', 'Дата платежа', 'Сумма' ]
-                                .table__col
-                                    span=item
-                    .table__body
-
-                        .table__row
-                            .table__col
-                                span При бронировании
-                            .table__col
-                                span В день бронирования
-                            .table__col
-                                span 20%
-
-                        each item in ['', '', '', '', '', '', '', ]
-
+                .payment__table
+                    .table
+                        .table__head
+                            .table__row
+                                each item in ['Взнос', 'Дата платежа', 'Сумма' ]
+                                    .table__col
+                                        span=item
+                        .table__body
 
                             .table__row
                                 .table__col
-                                    span 2 взнос
+                                    span При бронировании
                                 .table__col
-                                    span 15 марта 2023
+                                    span В день бронирования
                                 .table__col
-                                    span 10%
+                                    span 20%
+
+                            each item in ['', '', '', '', '', '', '', ]
+
+
+                                .table__row
+                                    .table__col
+                                        span 2 взнос
+                                    .table__col
+                                        span 15 марта 2023
+                                    .table__col
+                                        span 10%
 
                 .payment__form
                     // begin form
                     .form__content
                         .form__title
-                            span Узнайте подробнее об условиях рассрочки и возможности поэтапной оплаты
+                            span Узнайте подробнее об условиях<br> рассрочки и возможности<br> поэтапной оплаты
                         form.form(action="send.php")
                             input(type="hidden" name="subject" value="форма в футоре")
                             input(type="hidden" name="notspam" value="")
@@ -442,8 +436,160 @@ block content
 
                     // end form
 
-
     // end payment
+
+    // begin location
+    section#location.location.section
+        .container_center
+            .location__caption
+                h2.section__title
+                    span Business Bay — центр деловой<br>жизни Дубая с видом на Burj Khalifa
+                .section__desc
+                    p Элитная недвижимость в Дубаи — это возможность приобрести действительно<br> эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса.<br>Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь<br>в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни<br>услугам, включая рестораны, магазины, развлекательные центры и многое другое.
+                    p Все элитные дома в Дубае отличаются безупречным качеством,<br>а также высоким уровнем комфорта.
+        .location__slide
+            .slide
+                .slide__img.img
+                    img(src="../img/location_bg.webp", alt="alt")
+                .slide__bird.desktop.img
+                    img(src="../img/bird.webp", alt="alt")
+
+        .slide__nav.mobile
+            .slide__slider.slide_js
+            .slide__label
+                span Прогуляйтесь
+
+        .container_center
+
+            .location__row
+                .section__title
+                    span В пешей доступности
+                .location__list
+                    each item in [1,2,3]
+                        .location__item
+                            .location__img.img
+                                img(src="../img/location_"+item+".jpg", alt="alt")
+                            .location__content
+                                .location__label
+                                    span Торговый центр<br>«Название ТЦ»
+                                .location__time
+                                    i.icon_man
+                                    span 5 мин
+
+            .location__row
+                .section__title
+                    span До популярных локаций
+                .location__list
+                    each item in [4,5,6]
+                        .location__item
+                            .location__img.img
+                                img(src="../img/location_"+item+".jpg", alt="alt")
+                            .location__content
+                                .location__label
+                                    span Название <br>достопримечательности
+                                .location__time
+                                    i.icon_car
+                                    span 5 мин
+
+
+            .location__form
+                .section__title.mobile
+                    span Хотите узнать подробнее о локации?
+                .section__desc.mobile
+                    p Укажите ваш номер телефона, и мы проведем для вас персональную экскурсию по району<br>и познакомим с ближайшей инфраструктурой. Вживую или в дистанционном формате
+
+                // begin form
+                .form__content
+                    .section__title.desktop
+                        span Хотите узнать подробнее о локации?
+                    .section__desc.desktop
+                        p Укажите ваш номер телефона, и мы проведем для вас персональную экскурсию по району<br>и познакомим с ближайшей инфраструктурой. Вживую или в дистанционном формате
+                    form.form.form_row(action="send.php")
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row
+                            input(type="text" placeholder="Имя")
+                        .form__row
+                            input(type="text" required placeholder="+7").tel
+                        .form__row
+                            .button
+                                button.btn(type="submit") Записаться на экскурсию
+
+                        .form__row.form__row_full.mb_0
+                            .form__text
+                                span Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности
+
+                // end form
+
+    // end location
+
+    // begin developer
+    section#developer.developer.section
+        .container_center
+            .developer__top
+                .developer__flag.img.desktop
+                    img(src="../img/ae.svg", alt="alt")
+                h2.section__title
+                    span DAMAC Properties — один<br>из крупнейших застройщиков ОАЭ
+                .section__desc.desktop
+                    p Элитная недвижимость в Дубаи — это возможность приобрести действительно<br> эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса.<br> Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь<br> в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни<br> услугам, включая рестораны, магазины, развлекательные центры и многое другое.
+
+                .developer__list
+                    each item in [{number: '3', desc: 'место по объёму<br>рынка ОАЭ'},{number: '47', desc: 'проектов<br>реализовано'},{number: '1990', desc: 'год основания<br>компании'},]
+                        .developer__item
+                            .developer__number
+                                span=item.number
+                            .developer__desc
+                                span!=item.desc
+            .developer__bottom
+                .developer__content
+                    span Находясь в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни услугам, включая рестораны, магазины, развлекательные центры и многое другое.
+
+                .founder
+                    .founder__img.img
+                        img(src="../img/founder.webp", alt="alt")
+
+                    .founder__content
+
+                        .founder__info
+                            .founder__name
+                                span Зарема Кудусовна
+                            .founder__desc
+                                span Основатель компании DAMAC Properties 
+
+                        .founder__caption.img
+                            img(src="../img/caption.svg", alt="alt")
+                            .founder__pen.img.desktop
+                                img(src="../img/pen.webp", alt="alt")
+
+    // end developer
+
+    // begin news
+    section#news.news.section
+        .container_center
+            h2.section__title
+                span Новости проекта «Название проекта»
+            .news__content
+                .swiper.news_swiper_js
+                    .swiper-wrapper
+                        each item in [{title: 'Заголовок новости<br>номер один в две строки', text: 'В Дубае есть еще одно место, которое заслуживает внимания. Это небоскреб «Башня». Архитектором этого объекта является американский архитектор Рэм Колхаас. «Башня», построенная в виде полумесяца, представляет собой высотную постройку с большим количеством этажей. Небоскреб был возведен в Дубае в 2005 году.'}, {title: 'Заголовок новости', text: 'В Дубае есть еще одно место, которое заслуживает внимания. Это небоскреб «Башня». Архитектором этого объекта является американский архитектор Рэм Колхаас.'}, {title: 'Заголовок новости<br>номер один в две строки', text: 'Заголовок новости<br>номер один в две строки'}, {title: 'Заголовок новости', text: 'В Дубае есть еще одно место, которое заслуживает внимания.'}, {title: 'Заголовок новости<br>номер один в две строки', text: 'Заголовок новости<br>номер один в две строки'}, {title: 'Это небоскреб «Башня»', text: 'В Дубае есть еще одно место, которое заслуживает внимания. Это небоскреб «Башня». Архитектором этого объекта является американский архитектор Рэм Колхаас. «Башня», построенная в виде полумесяца, представляет собой высотную постройку с большим количеством этажей. Небоскреб был возведен в Дубае в 2005 году.'}]
+
+                            .swiper-slide
+                                .news__item
+                                    .news__title 
+                                        span!=item.title 
+                                    .news__text
+                                        span=item.text
+                                    .news__date
+                                        span 10 января 2023
+
+                .swiper-label.desktop
+                    span тяните
+
+
+
+    // end news
 
     //- // begin feedback
     //- section.feedback.section
@@ -598,16 +744,3 @@ block content
     //-             a(href="#" class="modal-close" data-dismiss="modal")
     //-             .form__message
     // End modal info
-
-
-    // begin programsInfo
-    //- section.section
-    //-     .container_center
-    //-         .programsInfo
-    //-             each item in [{num: '12', text: 'Программ'},{num: '25', text: 'Компетенций'},{num: '29', text: 'Преподавателей <br>и экспертов'}]
-    //-                 .programsInfo__item
-    //-                     .programsInfo__number=item.num
-    //-                     .programsInfo__text!=item.text
-
-
-    // end programsInfo

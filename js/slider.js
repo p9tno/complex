@@ -30,6 +30,35 @@ $(document).ready(function() {
         }
     });
 
+    const news = new Swiper('.news_swiper_js', {
+        speed: 500,
+        centeredSlides: true,
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        freeMode: true,
+        watchSlidesProgress: true,
+
+        mousewheel: {
+            invert: true,
+            forceToAxis: true,
+        },
+
+
+        slidesPerView: 1,
+        spaceBetween: 15,
+
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+
+        }
+    });
+
     const advantage = new Swiper('.advantage_swiper_js', {
         speed: 500,
         autoplay: {
@@ -37,7 +66,7 @@ $(document).ready(function() {
         },
         loop: true,
 
-        autoHeight: true,
+        // autoHeight: true,
 
         mousewheel: {
             invert: true,

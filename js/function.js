@@ -241,15 +241,15 @@ $(document).ready(function() {
     }
     }
 
-    onVisible( '.programsInfo__number', function ( e ) {
+    onVisible( '.percent__number span', function ( e ) {
         animateNumber( e, e.innerHTML );
     } );
 
-    function animateNumber( elem, final, duration = 1000 ) {
+    function animateNumber( elem, final, duration = 2000 ) {
         let start = 0;
         // console.log('init');
         setInterval( function () {
-            if ( final > start ) {
+            if ( final >= start ) {
                 elem.innerHTML = start++;
             }
         }, duration / final );
@@ -285,5 +285,41 @@ $(document).ready(function() {
     // };
     //
     // console.log(thousandSeparator(700));
+
+    function changeЫlide() {
+
+        let el = $('.slide__img');
+
+        // let width = el.width();
+        // // let showWidth = width
+        // console.log(width);
+
+        $( ".slide_js" ).slider({
+            range: "min",
+            value: 1000,
+            min: 0,
+            max: 5000,
+            step: 1,
+            slide: function( event, ui ) {
+                // console.log(event);
+                console.log(ui.value/100);
+                // $( "#slide-price-min" ).text( thousandSeparator(ui.value) );
+                // $( "#square_field" ).val( ui.value );
+                // $('.quiz-arrow__next').removeAttr('disabled');
+                el.css({
+                    // transform: `translateX(${ui.vaiue)`em),
+                    transform: `translateX(-${ui.value/100}%)`
+                })
+
+            }
+        });
+
+    };
+    changeЫlide();
+
+
+
+    // $( "#current_text" ).text( $( ".js-slide" ).slider( "value" ) );
+    // $( "#square_field" ).val( $( ".js-slide" ).slider( "value" ) );
 
 })
