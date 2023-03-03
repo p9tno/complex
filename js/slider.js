@@ -34,9 +34,9 @@ $(document).ready(function() {
         speed: 500,
         centeredSlides: true,
         loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        autoplay: {
+          delay: 5000,
+        },
 
         freeMode: true,
         watchSlidesProgress: true,
@@ -47,7 +47,7 @@ $(document).ready(function() {
         },
 
 
-        slidesPerView: 1,
+        slidesPerView: 3,
         spaceBetween: 15,
 
         breakpoints: {
@@ -65,8 +65,7 @@ $(document).ready(function() {
           delay: 5000,
         },
         loop: true,
-
-        // autoHeight: true,
+        autoHeight: true,
 
         mousewheel: {
             invert: true,

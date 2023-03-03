@@ -38,6 +38,23 @@ function isTouch() {
 
 $(document).ready(function() {
 
+    function preloader() {
+        $(()=>{
+
+            setTimeout( () => {
+                let p = $('#preloader');
+                p.addClass('hide');
+
+                setTimeout( () => {
+                    p.remove()
+                },1000);
+
+            },1000);
+        });
+    }
+    preloader();
+    // setTimeout( ()=> preloader(),15000 )
+
 
     function toggleNav() {
         $('.hamburger').click(function(event) {
@@ -58,7 +75,7 @@ $(document).ready(function() {
         });
 
         $(".header__nav").on('mouseleave', function() {
-            console.log('mouse of');
+            // console.log('mouse of');
             // let wrap = $(this).find('.task__wrap');
             // wrap.slideUp(300)
             $('.hamburger').removeClass('hamburger_open');
@@ -287,9 +304,7 @@ $(document).ready(function() {
     // console.log(thousandSeparator(700));
 
     function changeЫlide() {
-
         let el = $('.slide__img');
-
         // let width = el.width();
         // // let showWidth = width
         // console.log(width);
@@ -319,7 +334,18 @@ $(document).ready(function() {
 
 
 
-    // $( "#current_text" ).text( $( ".js-slide" ).slider( "value" ) );
-    // $( "#square_field" ).val( $( ".js-slide" ).slider( "value" ) );
+    function scroolToSection() {
+
+        $(".menu__item").on("click","a", function (event) {
+            event.preventDefault();
+            let id  = $(this).attr('href');
+            let top = $(id).offset().top-70;
+            $('body,html').animate({scrollTop: top}, 1500);
+            $('.hamburger').removeClass('hamburger_open');
+            $('.header__nav').removeClass('header__nav_open');
+            $( 'body' ).removeClass( 'nav-open' );
+        });
+    };
+    scroolToSection();
 
 })

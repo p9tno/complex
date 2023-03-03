@@ -2,7 +2,7 @@
  ----------------------------------------------------------------------------- */
 .header {
 	position: fixed;
-	position: absolute;
+	// position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -33,12 +33,12 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 1.25em 0 1.5em;
+		transition: 0.3s;
 		@media (max-width: 767px) {
 			font-size: 1em;
 		}
 		@media (min-width: 768px) {
 			padding: 1.5625em 0;
-			/* 25/16 */
 
 		}
 	}
@@ -283,7 +283,7 @@
 				height: 100%;
 				border: 0.0625em solid #E3E6EA;
 				border-radius: 6.25em;
-				transition: 0.3s;
+				// transition: 0.3s;
 
 				&:after,
 				&:before {
@@ -297,7 +297,7 @@
 					font-weight: 500;
 					letter-spacing: 0.02em;
 					color: #E3E6EA;
-					transition: 0.3s;
+					transition: color 0.3s;
 				}
 
 				&:before {
@@ -319,7 +319,7 @@
 					border: 0.0625em solid #E3E6EA;
 					background-color: $color_white;
 					border-radius: 50%;
-					transition: 0.3s;
+					transition: left 0.3s;
 					z-index: 10;
 
 					&:after,
@@ -446,7 +446,7 @@
 	// left: 0;
 	// width: 100%;
 	// z-index: 5;
-
+	//
 	// -webkit-animation-name: showMenu;
 	// animation-name: showMenu;
 	// -webkit-animation-duration: 0.3s;
@@ -458,6 +458,13 @@
 		.header__row {
 			font-size: 0.75em;
 			padding: 1em 0 0.5em;
+		}
+	}
+	@media (min-width: 768px) {
+		.header__row {
+			// font-size: 0.8em;
+			padding-top: 0.75em;
+			// padding-bottom: 0.5em;
 		}
 	}
 }

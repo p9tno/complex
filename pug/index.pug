@@ -584,163 +584,66 @@ block content
                                     .news__date
                                         span 10 января 2023
 
-                .swiper-label.desktop
+                .swiper-label
                     span тяните
 
 
 
     // end news
 
-    //- // begin feedback
-    //- section.feedback.section
-    //-     .container_center
-    //-         .feedback__content
-    //-             h2.section__title
-    //-                 span Остались вопросы по проекту?
-    //-             .section__desc
-    //-                 p Оставьте свои контактные данные, и мы свяжемся <br> с вами, чтобы ответить на ваши вопросы
-    //- 
-    //-             .manager.mobile
-    //-                 .manager__content
-    //-                     .manager__img.img
-    //-                         img(src="../img/manager.webp", alt="alt")
-    //- 
-    //-                     .manager__info
-    //-                         .manager__name
-    //-                             span Анна
-    //-                         .manager__desc
-    //-                             span менеджер проекта<br>«Название проекта»
-    //-                 .manager__masc.img
-    //-                     img(src="../img/phone.webp", alt="alt")
-    //- 
-    //- 
-    //-             .feedback__form
-    //-                 // begin form
-    //-                 .form__content
-    //-                     form.form.form_grid(action="send.php")
-    //-                         input(type="hidden" name="subject" value="форма в футоре")
-    //-                         input(type="hidden" name="notspam" value="")
-    //- 
-    //-                         .form__row
-    //-                             input(type="text" placeholder="Имя")
-    //-                         .form__row
-    //-                             input(type="text" required placeholder="+7").tel
-    //-                         .form__row
-    //-                             .button
-    //-                                 button.btn(type="submit") Отправить заявку
-    //-                         .form__row    
-    //-                             .form__messenger
-    //-                                 .messenger__title
-    //-                                     span или задайте свой вопрос в мессенджере онлайн
-    //-                                 .messenger__list
-    //-                                     a.messenger__link.messenger__link_whatsapp(href="#") Whatsapp
-    //-                                     a.messenger__link.messenger__link_telegram(href="#") Telegram
-    //- 
-    //-                         .form__row.form__row_full.mb_0
-    //-                             .form__text
-    //-                                 span Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности
-    //- 
-    //-                 // end form
-    //- 
-    //- 
-    //-         .feedback__img.img.desktop
-    //-             img(src="../img/feedback.webp", alt="alt")
-    //- 
-    //- // end feedback
+    // begin feedback
+    section.feedback.section
+        .container_center
+            .feedback__content
+                h2.section__title
+                    span Остались вопросы по проекту?
+                .section__desc
+                    p Оставьте свои контактные данные, и мы свяжемся <br> с вами, чтобы ответить на ваши вопросы
 
-    // begin testButton
-    //- section#testButton.testButton.section
-    //-     .container_center
-    //-         h2.section__title 
-    //-             span testButton
-    //-         .testButton__content
-    //-             a.btn(href="#") Получить консультацию
-    //-             br
-    //-             br
-    //-             a.btn.btn_info(href="#") Выбрать квартиру
-    //-             br
-    //-             br
-    //-             a.btn.btn_mask(href="#") Скачать презентацию
-    //-                 .btn_img
-    //-                     img(src="../img/btn_mask.png", alt="alt")
-    //-             br
-    //-             br
-    //-             a.btn(href="#")  Выбрать квартиру
-    //-             br
-    //-             br
-    //-             a.btn(href="#") Выбрать квартиру
-    //-             br
-    //-             br
-    //-             a.btn(href="#") Выбрать квартиру
+                .manager.mobile
+                    .manager__content
+                        .manager__img.img
+                            img(src="../img/manager.webp", alt="alt")
 
-    // end testButton
+                        .manager__info
+                            .manager__name
+                                span Анна
+                            .manager__desc
+                                span менеджер проекта<br>«Название проекта»
+                    .manager__masc.img
+                        img(src="../img/phone.webp", alt="alt")
 
 
-    // begin form
-    //- section#form.form.section
-    //-     .container_center
-    //-         .form__content
-    //-             h1.form__title Подать заявку на лизинг
-    //-             i.icon_close    
-    //-             form.form.form_grid(action="send.php")
-    //-                 //- из какой формы на сайте
-    //-                 input(type="hidden" name="subject" value="форма в футоре")
-    //-                 //- проверка спама
-    //-                 input(type="hidden" name="notspam" value="")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Предмет лизинга*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="ИНН")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Стоимость")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Контактное лицо")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Колличество")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Телефон*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Аванс")
-    //-                 .form__label
-    //-                 .form__row
-    //-                     select.select(data-placeholder="Выбор")
-    //-                         option(value="")
-    //-                         option(value="Значение 1") Значение 1
-    //-                         option(value="Значение 2") Значение 2
-    //-                         option(value="Значение 3") Значение 3
-    //-                         option(value="Значение 4") Значение 4
-    //-                 .form__row
-    //-                     input(type="email", placeholder="E-mail")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Местонахождение")
-    //-                 .form__row.form__row_full
-    //-                     textarea(type="text", placeholder="Дополнительная информация")
-    //-                 .form__row.form__row_full
-    //-                     .form__grup
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" checked="checked" value="test")
-    //-                             span radio 1
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" value="test_2")
-    //-                             span radio 2
-    //- 
-    //-                 .form__row
-    //-                     span.form__text Поля, помеченные *, обязательны к заполнения
-    //-                 .form__row
-    //-                     .button
-    //-                         button.btn#btn_didisabled_js(type="submit") Отправить
-    //-                 .form__row.form__row_full
-    //-                     .form__privacy
-    //-                         label.form__check
-    //-                             input#check_checked(type="checkbox" checked="checked")
-    //-                             span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
-    // end form
-    // Button trigger modal info
-    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#info") Click to open modal
-    // Begin Modal info
-    //- .modal.fade.info#info
-    //-     .modal-dialog
-    //-         .modal-content
-    //-             a(href="#" class="modal-close" data-dismiss="modal")
-    //-             .form__message
-    // End modal info
+                .feedback__form
+                    // begin form
+                    .form__content
+                        form.form.form_grid(action="send.php")
+                            input(type="hidden" name="subject" value="форма в футоре")
+                            input(type="hidden" name="notspam" value="")
+
+                            .form__row
+                                input(type="text" placeholder="Имя")
+                            .form__row
+                                input(type="text" required placeholder="+7").tel
+                            .form__row
+                                .button
+                                    button.btn(type="submit") Отправить заявку
+                            .form__row    
+                                .form__messenger
+                                    .messenger__title
+                                        span или задайте свой вопрос в мессенджере онлайн
+                                    .messenger__list
+                                        a.messenger__link.messenger__link_whatsapp(href="#") Whatsapp
+                                        a.messenger__link.messenger__link_telegram(href="#") Telegram
+
+                            .form__row.form__row_full.mb_0
+                                .form__text
+                                    span Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности
+
+                    // end form
+
+
+            .feedback__img.img.desktop
+                img(src="../img/feedback.webp", alt="alt")
+
+    // end feedback

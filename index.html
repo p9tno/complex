@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
+    <div class="preloader__wrap" id="preloader">
+      <div class="preloader"></div>
+    </div>
     <div class="wrapper">
       <header class="header">
         <div class="header__content">
@@ -40,15 +43,15 @@
         <div class="header__nav">
           <div class="logo mobile"><a class="logo__link" href="/"><img src="/img/logo.png" alt="alt"/></a></div>
           <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="#">О проекте</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Презентация комплекса </a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Преимущества проекта</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Выбрать апартамент</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Внутренняя отделка</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Беспроцентная рассрочка</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">О локации</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">О застройщике</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Новости проекта</a></li>
+            <li class="menu__item"><a class="menu__link" href="#project">О проекте</a></li>
+            <li class="menu__item"><a class="menu__link" href="#presentation">Презентация комплекса </a></li>
+            <li class="menu__item"><a class="menu__link" href="#advantage">Преимущества проекта</a></li>
+            <li class="menu__item"><a class="menu__link" href="#apartments">Выбрать апартамент</a></li>
+            <li class="menu__item"><a class="menu__link" href="#decoration">Внутренняя отделка</a></li>
+            <li class="menu__item"><a class="menu__link" href="#payment">Беспроцентная рассрочка</a></li>
+            <li class="menu__item"><a class="menu__link" href="#location">О локации</a></li>
+            <li class="menu__item"><a class="menu__link" href="#developer">О застройщике</a></li>
+            <li class="menu__item"><a class="menu__link" href="#news">Новости проекта</a></li>
           </ul>
           <div class="header__action mobile"><a class="btn btn_mask" href="#">Скачать презентацию
               <div class="btn_img"><img src="../img/btn_mask.png" alt="alt"/></div></a><a class="btn btn_info" href="#">Выбрать квартиру</a></div>
@@ -889,18 +892,64 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-label desktop"><span>тяните</span></div>
+              <div class="swiper-label"><span>тяните</span></div>
             </div>
           </div>
         </section>
         <!-- end news-->
-        <!-- begin testButton-->
-        <!-- end testButton-->
-        <!-- begin form-->
-        <!-- end form-->
-        <!-- Button trigger modal info-->
-        <!-- Begin Modal info-->
-        <!-- End modal info-->
+        <!-- begin feedback-->
+        <section class="feedback section">
+          <div class="container_center">
+            <div class="feedback__content">
+              <h2 class="section__title"><span>Остались вопросы по проекту?</span></h2>
+              <div class="section__desc">
+                <p>Оставьте свои контактные данные, и мы свяжемся <br> с вами, чтобы ответить на ваши вопросы</p>
+              </div>
+              <div class="manager mobile">
+                <div class="manager__content">
+                  <div class="manager__img img"><img src="../img/manager.webp" alt="alt"/></div>
+                  <div class="manager__info">
+                    <div class="manager__name"><span>Анна</span></div>
+                    <div class="manager__desc"><span>менеджер проекта<br>«Название проекта»</span></div>
+                  </div>
+                </div>
+                <div class="manager__masc img"><img src="../img/phone.webp" alt="alt"/></div>
+              </div>
+              <div class="feedback__form">
+                <!-- begin form-->
+                <div class="form__content">
+                  <form class="form form_grid" action="send.php">
+                    <input type="hidden" name="subject" value="форма в футоре"/>
+                    <input type="hidden" name="notspam" value=""/>
+                    <div class="form__row">
+                      <input type="text" placeholder="Имя"/>
+                    </div>
+                    <div class="form__row">
+                      <input class="tel" type="text" required="required" placeholder="+7"/>
+                    </div>
+                    <div class="form__row">
+                      <div class="button">
+                        <button class="btn" type="submit">Отправить заявку</button>
+                      </div>
+                    </div>
+                    <div class="form__row">   
+                      <div class="form__messenger">
+                        <div class="messenger__title"><span>или задайте свой вопрос в мессенджере онлайн</span></div>
+                        <div class="messenger__list"><a class="messenger__link messenger__link_whatsapp" href="#">Whatsapp</a><a class="messenger__link messenger__link_telegram" href="#">Telegram</a></div>
+                      </div>
+                    </div>
+                    <div class="form__row form__row_full mb_0">
+                      <div class="form__text"><span>Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности</span></div>
+                    </div>
+                  </form>
+                </div>
+                <!-- end form-->
+              </div>
+            </div>
+            <div class="feedback__img img desktop"><img src="../img/feedback.webp" alt="alt"/></div>
+          </div>
+        </section>
+        <!-- end feedback-->
       </main>
       <footer class="footer">
         <div class="footer__content">
@@ -911,17 +960,17 @@
             <div class="footer__col">
               <ul class="menu">
                 <div class="menu__col">
-                  <li class="menu__item"><a class="menu__link" href="#">О проекте</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Презентация комплекса </a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Преимущества проекта</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Выбрать апартамент</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Внутренняя отделка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#project">О проекте</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#presentation">Презентация комплекса </a></li>
+                  <li class="menu__item"><a class="menu__link" href="#advantage">Преимущества проекта</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#apartments">Выбрать апартамент</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#decoration">Внутренняя отделка</a></li>
                 </div>
                 <div class="menu__col">
-                  <li class="menu__item"><a class="menu__link" href="#">Беспроцентная рассрочка</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">О локации</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">О застройщике</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Новости проекта</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#payment">Беспроцентная рассрочка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#location">О локации</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#developer">О застройщике</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#news">Новости проекта</a></li>
                 </div>
               </ul>
               <div class="footer__action"><a class="btn btn_mask" href="#">Скачать презентацию
