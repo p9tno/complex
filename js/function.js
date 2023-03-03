@@ -348,4 +348,20 @@ $(document).ready(function() {
     };
     scroolToSection();
 
+    // https://github.com/michalsnik/aos
+    AOS.init({
+        disable: 'mobile',
+        anchorPlacement: 'bottom-bottom',
+        duration: 800, // values from 0 to 3000, with step 50ms
+        // offset: 20,
+        // once: true,
+    });
+
+    AOS.init({
+        disable: function () {
+            var maxWidth = 768;
+            return window.innerWidth < maxWidth;
+        }
+    });
+
 })

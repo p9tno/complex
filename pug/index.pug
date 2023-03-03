@@ -31,7 +31,7 @@ block content
     // begin presentation
     section#presentation.presentation.section
         .container_center
-            h2.section__title
+            h2.section__title(data-aos="fade-up")
                 span.desktop Заголовок номер два<br> раскрывающий суть концепции
                 span.mobile Заголовок номер<br> два раскрывающий<br> суть концепции
             .section__desc
@@ -158,7 +158,7 @@ block content
             .apartments__filter
                 .filter#filter
                     .filter__wrap
-                        h2.section__title
+                        h2.section__title(data-aos="fade-up")
                             span Выбрать квартиру
                         .filter__nav
                             ul.filter__list
@@ -221,7 +221,7 @@ block content
                 .modal-body
                     .thisApartment__content
                         .thisApartment__left.desktop
-                            .section__title
+                            .section__title(data-aos="fade-up")
                                 span Узнайте подробнее<br> об этих апартаментах
                             .apartments__item
                                 .apartments__img.img
@@ -289,7 +289,7 @@ block content
     section.feedback.section
         .container_center
             .feedback__content
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span Заинтересовал один<br>из предложенных лотов?
                 .section__desc
                     p Оставьте свои контактные данные, и мы свяжемся с вами,<br> чтобы рассказать подробнее о выбранном лоте и помочь<br> оформить бронирование по актуальной стоимости
@@ -350,7 +350,7 @@ block content
                 .decoration__img.img
                     img(src="../img/decoration.jpg", alt="alt")
                 .decoration__content
-                    .section__title
+                    .section__title(data-aos="fade-up")
                         span Заголовок номер один про отделку
                     .section__desc
                         p Элитная недвижимость в Дубаи — это возможность приобрести действительно эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса. Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни услугам, включая рестораны, магазины, развлекательные центры и многое другое.
@@ -369,7 +369,7 @@ block content
     section#payment.payment.section
         .container_center
             .payment__top
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span Беспроцентная рассрочка платежей на весь срок строительства
                 .percent
                     .percent__list
@@ -442,7 +442,7 @@ block content
     section#location.location.section
         .container_center
             .location__caption
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span Business Bay — центр деловой<br>жизни Дубая с видом на Burj Khalifa
                 .section__desc
                     p Элитная недвижимость в Дубаи — это возможность приобрести действительно<br> эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса.<br>Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь<br>в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни<br>услугам, включая рестораны, магазины, развлекательные центры и многое другое.
@@ -451,7 +451,7 @@ block content
             .slide
                 .slide__img.img
                     img(src="../img/location_bg.webp", alt="alt")
-                .slide__bird.desktop.img
+                .slide__bird.desktop.img(data-aos="fade-left")
                     img(src="../img/bird.webp", alt="alt")
 
         .slide__nav.mobile
@@ -462,7 +462,7 @@ block content
         .container_center
 
             .location__row
-                .section__title
+                .section__title(data-aos="fade-up")
                     span В пешей доступности
                 .location__list
                     each item in [1,2,3]
@@ -477,7 +477,7 @@ block content
                                     span 5 мин
 
             .location__row
-                .section__title
+                .section__title(data-aos="fade-up")
                     span До популярных локаций
                 .location__list
                     each item in [4,5,6]
@@ -500,7 +500,7 @@ block content
 
                 // begin form
                 .form__content
-                    .section__title.desktop
+                    .section__title.desktop(data-aos="fade-up")
                         span Хотите узнать подробнее о локации?
                     .section__desc.desktop
                         p Укажите ваш номер телефона, и мы проведем для вас персональную экскурсию по району<br>и познакомим с ближайшей инфраструктурой. Вживую или в дистанционном формате
@@ -530,7 +530,7 @@ block content
             .developer__top
                 .developer__flag.img.desktop
                     img(src="../img/ae.svg", alt="alt")
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span DAMAC Properties — один<br>из крупнейших застройщиков ОАЭ
                 .section__desc.desktop
                     p Элитная недвижимость в Дубаи — это возможность приобрести действительно<br> эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса.<br> Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь<br> в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни<br> услугам, включая рестораны, магазины, развлекательные центры и многое другое.
@@ -560,7 +560,7 @@ block content
 
                         .founder__caption.img
                             img(src="../img/caption.svg", alt="alt")
-                            .founder__pen.img.desktop
+                            .founder__pen.img.desktop(data-aos="fade-left")
                                 img(src="../img/pen.webp", alt="alt")
 
     // end developer
@@ -568,7 +568,7 @@ block content
     // begin news
     section#news.news.section
         .container_center
-            h2.section__title
+            h2.section__title(data-aos="fade-up")
                 span Новости проекта «Название проекта»
             .news__content
                 .swiper.news_swiper_js
@@ -595,7 +595,7 @@ block content
     section.feedback.section
         .container_center
             .feedback__content
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span Остались вопросы по проекту?
                 .section__desc
                     p Оставьте свои контактные данные, и мы свяжемся <br> с вами, чтобы ответить на ваши вопросы
