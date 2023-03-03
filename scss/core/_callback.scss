@@ -1,0 +1,154 @@
+.callback {
+    // display: none;
+    position: fixed;
+    bottom: 10em;
+    right: 10em;
+    z-index: 10;
+
+    &__toggle {
+        display: none;
+        cursor: pointer;
+        // .callback__img {
+        //     position: relative;
+        //     overflow: hidden;
+        //
+        //     &:after {
+        //         content: '';
+        //         position: absolute;
+        //         top: 0;
+        //         left: -150%;
+        //         height: 100%;
+        //         width: 3em;
+        //         transform: skewX(-45deg);
+        //         background: linear-gradient(90deg, rgba($color_white, 0.2), rgba($color_white, 1));
+        //         animation: flare 3s infinite linear;
+        //
+        //     }
+        // }
+    }
+
+    &__img {
+        position: relative;
+        flex: none;
+        width: 3.75em;
+        height: 3.75em;
+        border-radius: 100%;
+        font-size: 1.3334em;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0.125em;
+            left: 0.125em;
+
+            width: 0.75em;
+            height: 0.75em;
+            border-radius: 100%;
+
+            background-color: #31C876;
+            border: 0.125em solid #F7FAFD;
+        }
+
+    }
+
+    &__content {
+        .callback__img {
+            position: absolute;
+            top: -2em;
+            /* 40/16 */
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+        // display: none;
+        position: relative;
+
+        background: $color_white;
+        box-shadow: 0 25px 150px rgba(114, 132, 150, 0.2);
+        border-radius: 1.25em;
+        /* 20/16 */
+    }
+
+    &__name {
+        margin-bottom: 0.125em;
+
+        span {
+            font-weight: 600;
+            font-size: 1.5em;
+        }
+    }
+
+    &__info {
+        margin-bottom: 1.375em;
+        /* 22/16 */
+        span {
+            font-size: 0.75em;
+        }
+    }
+
+    &__social {
+        background: $color_white;
+        box-shadow: 0 25px 150px rgba(114, 132, 150, 0.2);
+        border-radius: 1.25em;
+        /* 20/16 */
+    }
+
+}
+
+// START flare
+@-webkit-keyframes flare {
+    0% {
+        left: -150%;
+    }
+
+    80% {
+        left: -150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+@-moz-keyframes flare {
+    0% {
+        left: -150%;
+    }
+
+    80% {
+        left: -150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+@-o-keyframes flare {
+    0% {
+        left: -150%;
+    }
+
+    80% {
+        left: -150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+@keyframes flare {
+    0% {
+        left: -150%;
+    }
+
+    80% {
+        left: -150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+// END flare

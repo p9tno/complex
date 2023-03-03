@@ -42,7 +42,8 @@ $(document).ready(function() {
         watchSlidesProgress: true,
 
         mousewheel: {
-            invert: true,
+            // invert: true,
+            invert: false,
             forceToAxis: true,
         },
 

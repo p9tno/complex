@@ -80,33 +80,16 @@
                 display: block;
                 position: absolute;
                 top: 0.125em;
-                /* 2/16 */
                 left: 0.125em;
-                /* 2/16 */
 
                 width: 0.75em;
-                /* 12/16 */
                 height: 0.75em;
                 border-radius: 100%;
 
                 background-color: #31C876;
                 border: 0.125em solid #F7FAFD;
-                /* 2/16 */
             }
 
-            .manager__circle {
-                position: absolute;
-                top: 2em;
-                left: 2em;
-
-                width: 0.75em;
-                /* 12/16 */
-                height: 0.75em;
-                border-radius: 100%;
-
-                background-color: #31C876;
-                border: 2px solid #F7FAFD;
-            }
         }
 
         &__info {}

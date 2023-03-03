@@ -677,6 +677,81 @@ body {
     transform: rotate(360deg);
   }
 }
+.callback {
+  position: fixed;
+  bottom: 10em;
+  right: 10em;
+  z-index: 10;
+}
+.callback__toggle {
+  display: none;
+  cursor: pointer;
+}
+.callback__img {
+  position: relative;
+  flex: none;
+  width: 3.75em;
+  height: 3.75em;
+  border-radius: 100%;
+  font-size: 1.3334em;
+}
+.callback__img:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.125em;
+  left: 0.125em;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 100%;
+  background-color: #31C876;
+  border: 0.125em solid #F7FAFD;
+}
+.callback__content {
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 25px 150px rgba(114, 132, 150, 0.2);
+  border-radius: 1.25em;
+  /* 20/16 */
+}
+.callback__content .callback__img {
+  position: absolute;
+  top: -2em;
+  /* 40/16 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.callback__name {
+  margin-bottom: 0.125em;
+}
+.callback__name span {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.callback__info {
+  margin-bottom: 1.375em;
+  /* 22/16 */
+}
+.callback__info span {
+  font-size: 0.75em;
+}
+.callback__social {
+  background: #ffffff;
+  box-shadow: 0 25px 150px rgba(114, 132, 150, 0.2);
+  border-radius: 1.25em;
+  /* 20/16 */
+}
+@keyframes flare {
+  0% {
+    left: -150%;
+  }
+  80% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
@@ -1825,27 +1900,12 @@ body {
   display: block;
   position: absolute;
   top: 0.125em;
-  /* 2/16 */
   left: 0.125em;
-  /* 2/16 */
   width: 0.75em;
-  /* 12/16 */
   height: 0.75em;
   border-radius: 100%;
   background-color: #31C876;
   border: 0.125em solid #F7FAFD;
-  /* 2/16 */
-}
-.feedback .manager__img .manager__circle {
-  position: absolute;
-  top: 2em;
-  left: 2em;
-  width: 0.75em;
-  /* 12/16 */
-  height: 0.75em;
-  border-radius: 100%;
-  background-color: #31C876;
-  border: 2px solid #F7FAFD;
 }
 .feedback .manager__name span {
   font-size: 0.875em;

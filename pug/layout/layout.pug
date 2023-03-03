@@ -29,6 +29,37 @@ html(lang="en")
             main.main_content
                 block content
 
+            .callback
+                .callback__toggle
+                    .callback__img.img
+                        img(src="../img/manager.webp", alt="alt")
+                .callback__content
+                    a(href="#").callback__close
+                        i.icon_nav_close
+                    .callback__img.img
+                        img(src="../img/manager.webp", alt="alt")
+                    .callback__name
+                        span Анна
+                    .callback__info
+                        span менеджер проекта «Название проекта»
+                    .callback__social
+                        .social
+                            a.social__link(href="#")
+                                i.icon_phone.mobile
+                                .social__number.desktop 
+                                    span + 38 099 123 45 67
+                                .social__label.desktop 
+                                    span бесплатная консультация по проекту
+
+                            a.social__link(href="#")
+                                i.icon_telegram
+
+                            a.social__link(href="#")
+                                i.icon_whatsapp
+
+
+
+
             include footer.pug
 
             include scripts.pug
