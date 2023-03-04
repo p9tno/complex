@@ -64,18 +64,13 @@ $(document).ready(function() {
             let div = $(".callback");
             if (!div.is(e.target) && div.has(e.target).length === 0) {
                 $('.callback__content').removeClass('active');
-                setTimeout( () => {
-                    $('.callback__toggle').addClass('active');
-                },10000);
+                $('.callback__toggle').addClass('active');
             }
         });
         $('.callback__close').on('click', function (e) {
             e.preventDefault();
             $('.callback__content').removeClass('active');
-
-            setTimeout( () => {
-                $('.callback__toggle').addClass('active');
-            },10000);
+            $('.callback__toggle').addClass('active');
         });
     };
     toggleCallback();
@@ -266,7 +261,7 @@ $(document).ready(function() {
 
 
     function scroolToSection() {
-        $(".menu__item").on("click","a", function (event) {
+        $(".menu__link,.scroll_js").on("click", function (event) {
             event.preventDefault();
             let id  = $(this).attr('href');
             let top = $(id).offset().top-70;
