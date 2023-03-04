@@ -55,6 +55,31 @@ $(document).ready(function() {
     preloader();
     // setTimeout( ()=> preloader(),15000 )
 
+    function toggleCallback() {
+        $('.callback__toggle').click(function(event) {
+            $(this).removeClass('active');
+            $('.callback__content').addClass('active');
+        });
+        $(document).mouseup(function (e) {
+            let div = $(".callback");
+            if (!div.is(e.target) && div.has(e.target).length === 0) {
+                $('.callback__content').removeClass('active');
+                setTimeout( () => {
+                    $('.callback__toggle').addClass('active');
+                },10000);
+            }
+        });
+        $('.callback__close').on('click', function (e) {
+            e.preventDefault();
+            $('.callback__content').removeClass('active');
+
+            setTimeout( () => {
+                $('.callback__toggle').addClass('active');
+            },10000);
+        });
+    };
+    toggleCallback();
+
 
     function toggleNav() {
         $('.hamburger').click(function(event) {
@@ -66,18 +91,13 @@ $(document).ready(function() {
     };
     toggleNav();
 
+
     function hideNav() {
         $(".header__nav").on('mouseenter', function() {
             // console.log('mouse on');
-            // let wrap = $(this).find('.task__wrap');
-            // wrap.slideDown(300)
-
         });
 
         $(".header__nav").on('mouseleave', function() {
-            // console.log('mouse of');
-            // let wrap = $(this).find('.task__wrap');
-            // wrap.slideUp(300)
             $('.hamburger').removeClass('hamburger_open');
             $('.header__nav').removeClass('header__nav_open');
             $( 'body' ).removeClass( 'nav-open' );
@@ -136,61 +156,10 @@ $(document).ready(function() {
         }
     });
 
-    // function activeNav() {
-    //     $('.menu-item').on('click', function() {
-    //         $('.menu-item').removeClass('current-menu-item');
-    //         $(this).addClass('current-menu-item');
-    //     })
-    // };
-    // activeNav();
-
-
-
-    function showMore(classItem, btn) {
-
-    // let classItem = '.vacancies__item';
-    // let classItem = class;
-    let item = $(''+ classItem +'');
-    let count = item.length;
-    let start = 1;
-    let show = 1;
-
-    item.addClass('d-none');
-    $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
-
-    $(btn).click(function(e) {
-        e.preventDefault();
-        $(this).addClass('loading');
-
-        let load = $(this).data('load');
-        let more = $(this).data('more');
-
-        start = (start + show <= count) ? start + show : count;
-
-        $(this).text(load);
-
-        setTimeout(() => {
-            $(''+ classItem +':lt(' + start + ')').removeClass('d-none');
-            if ($(''+ classItem +':not(.d-none)').length == count) {
-                $(this).parent().remove();
-            }
-            $(this).removeClass('loading');
-            $(this).text(more);
-        }, 500);
-
-
-    });
-
-    }
-    // showMore('.vacancies__item', '.show_more_v_js');
-
-
     $('.select').select2({
         placeholder: $(this).data('placeholder'),
         minimumResultsForSearch: Infinity,
         dropdownPosition: 'below'
-        // closeOnSelect: false
-        // dropdownAutoWidth: false,
     });
 
     function addDataFancybox() {
@@ -205,13 +174,8 @@ $(document).ready(function() {
     addDataFancybox();
 
     function stikyMenu() {
-        // let HeaderTop = $( 'header' ).offset().top;
         let HeaderTop = $( 'header' ).offset().top + $( '.header' ).innerHeight();
         let currentTop = $( window ).scrollTop();
-
-        // console.log(HeaderTop);
-        // console.log(currentTop);
-
         setNavbarPosition();
 
         $( window ).scroll( function () {
@@ -278,36 +242,8 @@ $(document).ready(function() {
     });
 
 
-    // Деление чисел на разряды Например из строки 10000 получаем 10 000
-    // Использование: thousandSeparator(1000) или используем переменную.
-    // function thousandSeparator(str) {
-    //     var parts = (str + '').split('.'),
-    //         main = parts[0],
-    //         len = main.length,
-    //         output = '',
-    //         i = len - 1;
-    //
-    //     while(i >= 0) {
-    //         output = main.charAt(i) + output;
-    //         if ((len - i) % 3 === 0 && i > 0) {
-    //             output = ' ' + output;
-    //         }
-    //         --i;
-    //     }
-    //
-    //     if (parts.length > 1) {
-    //         output += '.' + parts[1];
-    //     }
-    //     return output;
-    // };
-    //
-    // console.log(thousandSeparator(700));
-
-    function changeЫlide() {
+    function changeSlide() {
         let el = $('.slide__img');
-        // let width = el.width();
-        // // let showWidth = width
-        // console.log(width);
 
         $( ".slide_js" ).slider({
             range: "min",
@@ -316,13 +252,8 @@ $(document).ready(function() {
             max: 5000,
             step: 1,
             slide: function( event, ui ) {
-                // console.log(event);
                 console.log(ui.value/100);
-                // $( "#slide-price-min" ).text( thousandSeparator(ui.value) );
-                // $( "#square_field" ).val( ui.value );
-                // $('.quiz-arrow__next').removeAttr('disabled');
                 el.css({
-                    // transform: `translateX(${ui.vaiue)`em),
                     transform: `translateX(-${ui.value/100}%)`
                 })
 
@@ -330,12 +261,11 @@ $(document).ready(function() {
         });
 
     };
-    changeЫlide();
+    changeSlide();
 
 
 
     function scroolToSection() {
-
         $(".menu__item").on("click","a", function (event) {
             event.preventDefault();
             let id  = $(this).attr('href');

@@ -13,7 +13,7 @@ $(document).ready(function() {
         watchSlidesProgress: true,
 
         mousewheel: {
-            invert: true,
+            invert: false,
             forceToAxis: true,
         },
 
@@ -69,7 +69,7 @@ $(document).ready(function() {
         autoHeight: true,
 
         mousewheel: {
-            invert: true,
+            invert: false,
             forceToAxis: true,
         },
 

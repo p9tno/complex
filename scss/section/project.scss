@@ -1,6 +1,13 @@
 .project {
     padding-top: 8.125em;
 
+    .section__desc {
+        @media (min-width: 768px) {
+            width: 46em;
+            margin: 0 auto;
+        }
+    }
+
     &__list {
         margin-top: 2.25em;
         display: flex;

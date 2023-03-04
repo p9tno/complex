@@ -241,23 +241,6 @@
 			transition: 0.3s;
 		}
 	}
-	//
-	// input[type=search]::-webkit-search-cancel-button,
-	// input[type=search]::-webkit-search-decoration {
-	// 	appearance: none;
-	// }
-	//
-	// /* Для Chrome */
-	// input[type=number]::-webkit-inner-spin-button,
-	// input[type=number]::-webkit-outer-spin-button {
-	// 	height: auto;
-	// 	appearance: none;
-	// 	margin: 0;
-	// }
-	// /* Для Firefox */
-	// input[type=number] {
-	// 	appearance: textfield;
-	// }
 
 }
 
@@ -466,33 +449,6 @@
 					}
 				}
 
-				// &--disabled {
-				// 	.select2 {
-				// 		&-selection {
-				// 			background: #FFFFFF;
-				// 			border: 1px solid #DBDBDB;
-				// 			font-family: $main_font_family;
-				// 			color: $input_color;
-				// 			padding: 0.971em 1.175em;
-				// 			outline: none;
-				// 			font-weight: 400;
-				// 			border-radius: 0;
-				// 			transition: 0.3s;
-				// 			transition-property: color background border;
-				// 			width: 100%;
-				// 			height: auto;
-				// 			position: relative;
-				//
-				// 			&--single {
-				// 				background: #FFFFFF;
-				// 			}
-				//
-				// 			&__rendered {
-				// 				color: rgba(29, 29, 27, 0.5);
-				// 			}
-				// 		}
-				// 	}
-				// }
 			}
 		}
 	}

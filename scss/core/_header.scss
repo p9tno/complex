@@ -2,26 +2,11 @@
  ----------------------------------------------------------------------------- */
 .header {
 	position: fixed;
-	// position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	background-color: $color_white;
 	z-index: 5;
-
-	// &:before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	height: 0.3125em;
-	// 	background-color: $color_info;
-	// 	@media (min-width: 768px) {
-	// 		height: 0.625em;
-	//
-	// 	}
-	// }
 
 	&__content {
 		@extend .container_center;
@@ -90,20 +75,6 @@
 			left: 0;
 		}
 
-		// &:before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	right: -1em;
-		// 	height: 0.3125em;
-		// 	background-color: $color_info;
-		// 	@media (min-width: 768px) {
-		// 		height: 0.625em;
-		//
-		// 	}
-		// }
-
 		.logo {
 			margin-bottom: 2.25em;
 		}
@@ -160,14 +131,12 @@
 
 			> * {
 				margin-bottom: 1.25em;
-				/* 20/16 */
 			}
 		}
 
 		.social {
 			justify-content: center;
 			margin-top: 4.375em;
-			/* 70/16 */
 		}
 
 	}
@@ -283,14 +252,12 @@
 				height: 100%;
 				border: 0.0625em solid #E3E6EA;
 				border-radius: 6.25em;
-				// transition: 0.3s;
 
 				&:after,
 				&:before {
 					position: absolute;
 					top: 50%;
 					transform: translateY(-50%);
-					// z-index: 1;
 					font-family: $second_font_family;
 					font-style: normal;
 					font-size: 0.875em;
@@ -418,12 +385,10 @@
 		position: absolute;
 		bottom: -0.75em;
 		right: 0;
-		// letter-spacing: 0.02em;
 
 		span {
 			font-weight: 600;
 			font-size: 0.625em;
-			/* 10/16 */
 			color: rgba(#728496, 0.5);
 		}
 	}
@@ -441,18 +406,6 @@
 
 // stiky menu
 .stiky {
-	// position: fixed;
-	// top: 0;
-	// left: 0;
-	// width: 100%;
-	// z-index: 5;
-	//
-	// -webkit-animation-name: showMenu;
-	// animation-name: showMenu;
-	// -webkit-animation-duration: 0.3s;
-	// animation-duration: 0.3s;
-	// -webkit-animation-fill-mode: both;
-	// animation-fill-mode: both;
 
 	@media (max-width: 767px) {
 		.header__row {
@@ -462,9 +415,7 @@
 	}
 	@media (min-width: 768px) {
 		.header__row {
-			// font-size: 0.8em;
 			padding-top: 0.75em;
-			// padding-bottom: 0.5em;
 		}
 	}
 }
@@ -472,15 +423,3 @@
 .nav-open {
 	overflow: hidden;
 }
-
-// @keyframes showMenu {
-// 	0% {
-// 		opacity: 0.5;
-// 		transform: translateY(-6em);
-// 	}
-//
-// 	100% {
-// 		opacity: 1;
-// 		transform: translateY(0em);
-// 	}
-// }

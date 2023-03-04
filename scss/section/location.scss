@@ -1,6 +1,13 @@
 .location {
     overflow: hidden;
 
+    .section__desc {
+        @media (min-width: 768px) {
+            width: 50em;
+            margin: 0 auto;
+        }
+    }
+
     @media (min-width: 768px) {
         padding-bottom: 9.0625em;
 

@@ -1,6 +1,13 @@
 .presentation {
     overflow: hidden;
 
+    .section__desc {
+        @media (min-width: 768px) {
+            width: 50em;
+            margin: 0 auto;
+        }
+    }
+
     &__slider {
 
         @media (max-width: 767px) {
