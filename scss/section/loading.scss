@@ -70,24 +70,31 @@
     }
 
     &__list {
-        margin-bottom: 11em;
         padding-left: 0.75em;
-        columns: 2;
-        column-gap: 2em;
+        margin-bottom: 11em;
+        display: flex;
+        flex-wrap: wrap;
+
+        .loading__item {
+            margin: 0 0.75em 1em;
+            width: calc(50% - 1.5em);
+        }
+
         @media (min-width: 768px) {
-            margin-bottom: 15.25em;
-            column-gap: 1em;
             padding-left: 1.25em;
+            margin-bottom: 15.25em;
+
+            .loading__item {
+                margin: 0 0.75em 1.875em;
+            }
         }
     }
 
     &__item {
         position: relative;
         line-height: 1;
-        margin-bottom: 1em;
         @media (min-width: 768px) {
             line-height: 1.334;
-            margin-bottom: 1.875em;
         }
 
         &:before {
@@ -95,6 +102,7 @@
             position: absolute;
             top: 0.6em;
             left: -1.25em;
+            flex: none;
 
             width: 0.375em;
             height: 0.375em;
