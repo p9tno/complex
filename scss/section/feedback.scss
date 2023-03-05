@@ -1,40 +1,49 @@
 .feedback {
     .section__desc,
     .section__title {
-        @media (max-width: 767px) {
+        @media (max-width: 500px) {
             text-align: left;
+        }
+    }
+
+    .section__desc {
+        br {
+            display: none;
+            @media (min-width: 501px) {
+                display: inline;
+            }
         }
     }
 
     position: relative;
     background-color: $color_primary_bg;
 
-    @media (min-width: 768px) {
+    @media (min-width: 501px) {
         background-color: inherit;
         padding-top: 5.3125em;
         padding-bottom: 6.875em;
     }
 
     &__content {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 50em;
             margin-left: auto;
         }
     }
 
     &__form {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin-top: 3.125em;
         }
 
         .form__content {
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 padding: 3.4375em 3.125em 2.8125em;
             }
         }
 
         .form__row {
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 position: relative;
                 z-index: 1;
 
@@ -46,7 +55,7 @@
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 501px) {
         &__img {
             position: absolute;
             bottom: 0;

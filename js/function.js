@@ -1,41 +1,3 @@
-var app = {
-    pageScroll: '',
-    lgWidth: 1200,
-    mdWidth: 992,
-    smWidth: 768,
-    resized: false,
-    iOS: function () {
-        return navigator.userAgent.match( /iPhone|iPad|iPod/i );
-    },
-    touchDevice: function () {
-        return navigator.userAgent.match( /iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile/i );
-    }
-};
-
-function isLgWidth() {
-    return $( window ).width() >= app.lgWidth;
-} // >= 1200
-function isMdWidth() {
-    return $( window ).width() >= app.mdWidth && $( window ).width() < app.lgWidth;
-} //  >= 992 && < 1200
-function isSmWidth() {
-    return $( window ).width() >= app.smWidth && $( window ).width() < app.mdWidth;
-} // >= 768 && < 992
-function isXsWidth() {
-    return $( window ).width() < app.smWidth;
-} // < 768
-function isIOS() {
-    return app.iOS();
-} // for iPhone iPad iPod
-function isTouch() {
-    return app.touchDevice();
-} // for touch device
-
-
-
-
-
-
 $(document).ready(function() {
 
     function preloader() {
@@ -232,9 +194,9 @@ $(document).ready(function() {
     }
     // end animate numbers
 
-    $(function(){
-        $(".tel").mask("+7 999 999 99 99");
-    });
+    // $(function(){
+    //     $(".tel").mask("+7 999 999 99 99");
+    // });
 
 
     function changeSlide() {
@@ -284,7 +246,7 @@ $(document).ready(function() {
 
     AOS.init({
         disable: function () {
-            var maxWidth = 768;
+            var maxWidth = 1200;
             return window.innerWidth < maxWidth;
         }
     });

@@ -1,12 +1,12 @@
 .payment {
     .container_center {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             position: relative;
             z-index: 1;
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 501px) {
         padding-bottom: 7.8125em;
         background-color: $color_primary_bg;
         position: relative;
@@ -41,16 +41,16 @@
 
     &__top {
         .section__title {
-            @media (max-width: 767px) {
+            @media (max-width: 500px) {
                 margin-bottom: 1.25em;
             }
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 text-align: left;
             }
         }
 
         margin-bottom: 1.25em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin-bottom: 3.125em;
             display: flex;
             justify-content: space-between;
@@ -59,7 +59,7 @@
     }
 
     &__bottom {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -69,25 +69,25 @@
     &__table {
         margin: 0 -1.25em 1.25em;
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin: 0;
         }
     }
 
     &__form {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 28.75em;
         }
 
         .form__title {
             margin-bottom: 1.25em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 margin-right: -2em;
             }
 
             span {
                 font-size: 1em;
-                @media (min-width: 768px) {
+                @media (min-width: 501px) {
                     font-size: 1.5em;
 
                 }
@@ -98,7 +98,7 @@
 }
 
 .percent {
-    @media (min-width: 768px) {
+    @media (min-width: 501px) {
         flex: none;
         width: 31.25em;
     }
@@ -107,7 +107,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             justify-content: space-between;
         }
     }
@@ -115,7 +115,7 @@
     &__item {
         &:first-child {
             margin-right: 3.75em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 margin-right: 0;
             }
         }
@@ -126,7 +126,7 @@
             font-weight: 300;
             color: $color_info;
             font-size: 2.5em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 5.625em;
             }
 
@@ -139,13 +139,13 @@
 
     &__desc {
         line-height: 1;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             line-height: 1.334;
         }
 
         span {
             font-size: 0.75em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 1.125em;
 
             }
@@ -161,7 +161,7 @@
     box-shadow: 0 25px 150px rgba(114, 132, 150, 0.2);
     font-size: 0.601em;
 
-    @media (min-width: 768px) {
+    @media (min-width: 501px) {
         font-size: 1em;
         overflow: hidden;
         border-radius: 1.25em;

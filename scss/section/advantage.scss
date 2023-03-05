@@ -2,7 +2,7 @@
     overflow: hidden;
 
     &__menu {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin: 0;
             padding: 0;
             list-style: none;
@@ -21,7 +21,7 @@
     }
 
     &__item {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             position: relative;
 
             &:before {
@@ -68,7 +68,7 @@
     }
 
     &__link {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             position: relative;
             text-decoration: none;
             color: #728496;
@@ -90,7 +90,7 @@
     &__slider {
         width: 38.125em;
         margin-left: 1.25em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin-top: 2.5em;
             margin-left: 12.5em;
             width: 179.375em;
@@ -99,7 +99,7 @@
 
     &__wrap {
         width: 18.125em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 81.25em;
             display: flex;
             justify-content: space-between;
@@ -112,7 +112,7 @@
         height: 12.5em;
         margin-bottom: 1.5625em;
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin-bottom: 0;
             flex: none;
             width: 41.875em;
@@ -131,7 +131,7 @@
             margin-bottom: 0.625em;
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 35em;
         }
     }
@@ -139,7 +139,7 @@
     &__top {
         border-bottom: 0.0625em solid rgba($color_info, 0.1);
         padding-bottom: 1.25em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             padding-bottom: 3.125em;
 
         }
@@ -147,7 +147,7 @@
 
     &__bottom {
         padding-top: 1.25em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             padding-top: 3.125em;
 
         }
@@ -170,7 +170,7 @@
         span {
             display: block;
             font-size: 2.5em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 2.8125em;
 
             }
@@ -192,7 +192,7 @@
         font-size: 0.8em;
         bottom: 0;
         left: 15.75em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             font-size: 1em;
             bottom: 6em;
             left: 75em;

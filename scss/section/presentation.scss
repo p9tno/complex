@@ -2,7 +2,7 @@
     overflow: hidden;
 
     .section__desc {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 50em;
             margin: 0 auto;
         }
@@ -10,7 +10,7 @@
 
     &__slider {
 
-        @media (max-width: 767px) {
+        @media (max-width: 500px) {
             margin-top: 2.875em;
             position: relative;
             left: 50%;
@@ -19,7 +19,7 @@
 
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 138.125em;
         }
     }
@@ -28,7 +28,7 @@
         width: 15.75em;
         height: 8.75em;
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 22.5em;
             height: 12.5em;
 

@@ -9,7 +9,7 @@
 	&__row {
 		padding: 3.75em 0 3.125em;
 		text-align: center;
-		@media (min-width: 768px) {
+		@media (min-width: 501px) {
 			text-align: left;
 			display: flex;
 			justify-content: space-between;
@@ -23,7 +23,7 @@
 			height: 2.875em;
 			margin: 0 auto 2.5em;
 
-			@media (min-width: 768px) {
+			@media (min-width: 501px) {
 				margin: 0;
 				width: 10em;
 				height: 4.3125em;
@@ -35,7 +35,7 @@
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			@media (min-width: 768px) {
+			@media (min-width: 501px) {
 				width: 32.125em;
 				display: flex;
 				justify-content: space-between;
@@ -43,7 +43,7 @@
 
 			&__item {
 				margin-bottom: 1.25em;
-				@media (min-width: 768px) {
+				@media (min-width: 501px) {
 					margin-bottom: 1em;
 
 				}
@@ -56,7 +56,7 @@
 				position: relative;
 
 				font-size: 1em;
-				@media (min-width: 768px) {
+				@media (min-width: 501px) {
 					font-size: 1.125em;
 				}
 
@@ -87,7 +87,7 @@
 			.btn {
 				&:first-child {
 					margin-bottom: 1.75em;
-					@media (min-width: 768px) {
+					@media (min-width: 501px) {
 						margin-bottom: 0;
 						margin-right: 1.75em;
 					}
@@ -122,7 +122,7 @@
 		}
 
 		&:last-child {
-			@media (min-width: 768px) {
+			@media (min-width: 501px) {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
@@ -133,7 +133,7 @@
 		.social {
 			margin-top: 4.375em;
 			justify-content: center;
-			@media (min-width: 768px) {
+			@media (min-width: 501px) {
 				margin-top: 0;
 				justify-content: flex-start;
 			}
@@ -163,7 +163,7 @@
 
 		.licence {
 			margin-top: 2.75em;
-			@media (min-width: 768px) {
+			@media (min-width: 501px) {
 				margin-top: 0;
 			}
 			letter-spacing: 0.02em;

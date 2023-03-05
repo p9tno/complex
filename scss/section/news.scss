@@ -4,19 +4,19 @@
     .section__title {
         margin-bottom: 0;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 501px) {
         padding-bottom: 5em;
     }
 
     &__content {
-        @media (max-width: 767px) {
+        @media (max-width: 500px) {
             position: relative;
             width: 56.25em;
             left: 50%;
             transform: translateX(-50%);
 
         }
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 100em;
         }
     }
@@ -34,7 +34,7 @@
         cursor: grab;
         padding: 1.875em 0.9375em 1.5625em;
         min-height: 16.25em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             padding: 3.125em 1.25em 2.5em;
             min-height: 25.625em;
         }
@@ -44,13 +44,13 @@
     &__title {
         line-height: 1.3;
         height: 2.75em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             height: 4.25em;
         }
 
         span {
             font-size: 0.9375em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 1.5em;
             }
         }
@@ -60,7 +60,7 @@
         margin: 0.5em 0;
         line-height: 0.95;
         min-height: 7em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             line-height: 1.3;
             min-height: 12em;
 
@@ -68,7 +68,7 @@
 
         span {
             font-size: 0.6875em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 1.125em;
             }
         }
@@ -85,7 +85,7 @@
         border-radius: 6.25em;
         text-align: center;
         padding: 0.282em 0.758em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             padding: 0.351em 0.91em;
 
         }
@@ -94,7 +94,7 @@
             display: block;
             line-height: 1;
             font-size: 0.5625em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 0.875em;
             }
         }
@@ -102,13 +102,13 @@
 
     .swiper {
         padding: 1.5625em 0 0.875em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             padding: 3.4375em 0 3.4375em 1.25em;
         }
     }
 
     .swiper-label {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin: 0 0 0 69em;
         }
     }

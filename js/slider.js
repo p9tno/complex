@@ -22,7 +22,7 @@ $(document).ready(function() {
         spaceBetween: 8,
 
         breakpoints: {
-            768: {
+            501: {
                 slidesPerView: 6,
                 spaceBetween: 10,
             },
@@ -52,7 +52,7 @@ $(document).ready(function() {
         spaceBetween: 15,
 
         breakpoints: {
-            768: {
+            501: {
                 slidesPerView: 3,
                 spaceBetween: 40,
             },
@@ -83,7 +83,7 @@ $(document).ready(function() {
         spaceBetween: 30,
 
         breakpoints: {
-            768: {
+            501: {
                 spaceBetween: 270,
                 slidesPerView: 2,
                 freeMode: true,
@@ -107,5 +107,71 @@ $(document).ready(function() {
         $('.advantage__item').removeClass('active');
         currentItem.addClass('active');
     });
+
+
+    // function mobilSlider () {
+    //     let slider_services = null;
+    //     let slider_conditions = null;
+    //     let mediaQuerySize = 501;
+    //
+    //     function initSlider () {
+    //         if (!slider_services) {
+    //             slider_services = new Swiper('.services-swiper-js', {
+    //
+    //                 pagination: {
+    //                     el: '.services__dotted',
+    //                 },
+    //
+    //                 slidesPerView: 1,
+    //                 spaceBetween: 22,
+    //
+    //                 observer: true,
+    //                 observeParents: true,
+    //                 observeSlideChildren: true,
+    //             });
+    //         }
+    //
+    //         if (!slider_conditions) {
+    //             slider_conditions = new Swiper('.conditions-swiper-js', {
+    //
+    //                 pagination: {
+    //                     el: '.conditions__dotted',
+    //                 },
+    //
+    //                 slidesPerView: 1,
+    //                 spaceBetween: 22,
+    //
+    //                 observer: true,
+    //                 observeParents: true,
+    //                 observeSlideChildren: true,
+    //             });
+    //         }
+    //
+    //     }
+    //
+    //     function destroySlider () {
+    //         if (slider_services) {
+    //             slider_services.destroy();
+    //             slider_services = null;
+    //         }
+    //
+    //         if (slider_conditions) {
+    //             slider_conditions.destroy();
+    //             slider_conditions = null;
+    //         }
+    //     }
+    //
+    //     $(window).on('load resize', function () {
+    //         let windowWidth = $(this).innerWidth();
+    //         if (windowWidth <= mediaQuerySize) {
+    //             // initSlider();
+    //             console.log('init');
+    //         } else {
+    //             // destroySlider();
+    //             console.log('destroy');
+    //         }
+    //     });
+    // }
+    // mobilSlider();
 
 });

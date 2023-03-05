@@ -1,17 +1,17 @@
 .developer {
     .section__desc {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 50em;
             margin: 0 auto;
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 501px) {
         padding-bottom: 7em;
     }
 
     &__flag {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             width: 1.875em;
             height: 1.875em;
             margin: 0 auto 1.875em;
@@ -21,7 +21,7 @@
 
     &__top {
         margin-bottom: 2em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin-bottom: 6em;
 
         }
@@ -32,7 +32,7 @@
         display: flex;
         justify-content: space-between;
         text-align: center;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin: 2.5em auto 0;
             width: 56.25em;
         }
@@ -45,7 +45,7 @@
             font-weight: 300;
             color: $color_info;
             font-size: 2.5em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 5.625em;
 
             }
@@ -54,14 +54,14 @@
 
     &__desc {
         line-height: 1;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             line-height: 1.334;
 
         }
 
         span {
             font-size: 0.75em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 1.125em;
 
             }
@@ -73,7 +73,7 @@
         position: relative;
         border-top: 0.0625em solid rgba(114, 132, 150, 0.15);
         padding-top: 4.375em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             padding-top: 11.25em;
 
         }
@@ -87,7 +87,7 @@
             top: 1.75em;
             left: 50%;
             transform: translateX(-50%);
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 top: 0.75em;
                 font-size: 2.375em;
                 left: 0;
@@ -110,7 +110,7 @@
 
         span {
             font-size: 0.875em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 1.5em;
 
             }
@@ -121,7 +121,7 @@
 }
 
 .founder {
-    @media (min-width: 768px) {
+    @media (min-width: 501px) {
         width: 40.625em;
         margin: 0 3.125em 0 auto;
     }
@@ -133,7 +133,7 @@
         font-size: 0.28684em;
         margin: 0 auto;
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             font-size: 1em;
             margin: 0;
             position: absolute;
@@ -145,7 +145,7 @@
 
     &__content {
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -154,20 +154,20 @@
 
     &__info {
         text-align: center;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             text-align: left;
         }
     }
 
     &__name {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin-bottom: 0.4375em;
         }
 
         span {
             font-weight: 600;
             font-size: 0.875em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 1.5em;
             }
         }
@@ -176,7 +176,7 @@
     &__desc {
         span {
             font-size: 0.625em;
-            @media (min-width: 768px) {
+            @media (min-width: 501px) {
                 font-size: 0.75em;
             }
         }
@@ -188,7 +188,7 @@
         height: 9.875em;
         font-size: 0.4706em;
         margin: 1.25em auto 0;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin: 0;
             font-size: 1em;
         }

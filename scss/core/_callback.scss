@@ -10,7 +10,7 @@
         bottom: 2em;
         right: 2em;
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             font-size: 1em;
             bottom: 4em;
             right: 2em;
@@ -74,7 +74,7 @@
             transform: translateX(0);
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             font-size: 1em;
             bottom: 4em;
             right: 2em;
@@ -122,7 +122,7 @@
         border-radius: 1.25em;
         padding: 1em 1.5em;
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             padding: 1.875em 2em 3.125em;
 
         }

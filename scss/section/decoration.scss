@@ -1,12 +1,12 @@
 .decoration {
     .section__desc,
     .section__title {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             text-align: left;
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 501px) {
         padding-top: 6.875em;
         padding-bottom: 9.375em;
         background-color: $color_primary_bg;
@@ -15,7 +15,7 @@
 
     &__row {
         margin-bottom: 1.875em;
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin-bottom: 3.125em;
         }
 
@@ -23,7 +23,7 @@
             margin-bottom: 0;
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -55,7 +55,7 @@
         margin-bottom: 1.875em;
         /* 30/16 */
 
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             margin-bottom: 0;
             flex: none;
             width: 41.875em;
@@ -64,7 +64,7 @@
     }
 
     &__content {
-        @media (min-width: 768px) {
+        @media (min-width: 501px) {
             flex: none;
             width: 35em;
         }
