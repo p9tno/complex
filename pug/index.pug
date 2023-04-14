@@ -2,6 +2,22 @@ extends layout/layout.pug
 
 block content
 
+    //- // begin thanks
+    //- section#thanks.thanks.section
+    //-     .thanks__content
+    //-         h1.section__title
+    //-             span Мы получили вашу заявку, благодарим за доверие
+    //-         .section__desc
+    //-             p В ближайшее время по указанному номеру с вами свяжется наш специалист по недвижимости и предоставит необходимую информацию.
+    //-         .thanks__btn
+    //-             a(href="#").btn на главную
+
+    //-     .thanks__licence 
+
+    //-         span Licence N 1234567890
+
+    //- // end thanks
+
     // begin project (style="background-image: url('../img/project.webp')")
     section#project.project.section
         .container_center
@@ -16,17 +32,17 @@ block content
                     span от 2 555 000 AED
                 .project__item
                     a(href="#") Business Bay
-
+    
         .project__img.img
             a.btn.btn_mask(class="scroll_js" href="#loading") Скачать презентацию
                 .btn_img
                     img(src="../img/btn_mask.png", alt="alt")
-
+    
             img(src="../img/project.webp", alt="alt")
-
-
+    
+    
     // end project
-
+    
     // begin presentation
     section#presentation.presentation.section
         .container_center
@@ -37,23 +53,23 @@ block content
                 p Все элитные дома в Дубае отличаются безупречным качеством, а также высоким уровнем комфорта.
         .presentation__slider
             .swiper.presentation_swiper_js.itemForDataFancybox_js
-
+    
                 .swiper-label.desktop
                     span тяните
-
+    
                 .swiper-wrapper
                     each item in [1,2,3,4,5,1,2,3,4,5,1,2,3,4,5]
                         .swiper-slide
                             .presentation__img.img
                                 a(href="../img/slide_big_"+item+".jpg" data-fancybox data-type="image")
                                     img(src="../img/slide_"+item+".jpg" loading="lazy" alt="img")
-
+    
                 .swiper-label.mobile
                     span тяните
-
-
+    
+    
     // end presentation 
-
+    
     // begin loading
     section#loading.loading.section
         .container_center
@@ -67,12 +83,12 @@ block content
                         each item in ['Полный набор актуальный планировок и цен', 'Описание концепции и истории создания', 'Расчёт инвестиционной привлекательности', 'Особенности комплекса и уникальные преимущества']
                             .loading__item
                                 span=item
-
+    
                     .loading__img.img
                         img(src="../img/loading.webp", alt="alt")
-
+    
                     .loading__form
-
+    
                         // begin form
                         .form__content
                             .form__label
@@ -80,12 +96,12 @@ block content
                             form.form(action="send.php")
                                 input(type="hidden" name="subject" value="форма в футоре")
                                 input(type="hidden" name="notspam" value="")
-
+    
                                 .form__row
                                     input(type="text" placeholder="Имя")
                                 .form__row
                                     input(type="number" required placeholder="+").tel
-
+    
                                 .form__row
                                     .button
                                         button.btn.btn_mask(type="submit") Скачать презентацию
@@ -94,14 +110,14 @@ block content
                                 .form__row.mb_0
                                     .form__text
                                         span Нажимая на кнопку вы соглашаетесь с условиями обработки<br> данных и политикой конфиденциальности
-
+    
                         // end form
-
-
-
-
+    
+    
+    
+    
     // end loading
-
+    
     // begin advantage
     section#advantage.advantage.section
         .container_center.desktop
@@ -118,7 +134,7 @@ block content
                     a(href="#").advantage__link Преимущество номер пять
                 li.advantage__item(data-index="5")
                     a(href="#").advantage__link Преимущество номер шесть
-
+    
         .advantage__slider
             .swiper.advantage_swiper_js
                 .swiper-wrapper
@@ -139,19 +155,19 @@ block content
                                         .advantage__info
                                             span 25
                                             p метров длина<br>панорамного бассейна
-
-
+    
+    
                 .advantage__arrows
                     i.icon_arrow_left
                     i.icon_arrow_right
-
-
+    
+    
     // end advantage
-
+    
     // begin apartments
     section#apartments.apartments.section
         .container_center
-
+    
             .apartments__filter
                 .filter#filter
                     .filter__wrap
@@ -166,24 +182,24 @@ block content
                                         input(type="checkbox" value="apartments-"+item+"" id="apartments_"+item+"")
                                         label(for="apartments_"+item+"")
                                             span=item
-
+    
                             .filter__select
                                 select.select(name="select" data-placeholder="По популярности")
                                     option(value="")
                                     option(value="default" selected="selected") По популярности
                                     option(value="top") По возрастанию
                                     option(value="bottom") По убыванию
-
+    
             .apartments__grid
                 each item in ['1-спальные апартаменты','2-спальные апартаменты','3-спальные апартаменты','4-спальные апартаменты','5-спальные апартаменты','6-спальные апартаменты',]
-
+    
                     a(href="#thisApartment").apartments__item.show_js
                         .apartments__img.img
                             img(src="../img/apartment.webp", data-src="../img/apartment.webp" alt="alt")
                         .apartments__content
                             .apartments__title
                                 span(data-title=""+item+"")=item
-
+    
                             .apartments__row
                                 .apartments__col
                                     span(data-m2="64,5").m2_js 64,5
@@ -191,24 +207,24 @@ block content
                                 .apartments__col
                                     span(data-ft="110").ft_js 110
                                     span  фт2
-
+    
                             .apartments__row
                                 .apartments__col
                                     span(data-aed="от 540 000 AED").aed_js от 540 000 AED
                                 .apartments__col
                                     span(data-dollar="от $175 000").dollar_js от $175 000
-
+    
                             .apartments__more
                                 i.icon_info
                                 span Узнать подробнее
-
-
+    
+    
             .apartments__showmore
                 a.showmore__link(href="#")
                     span Показать ещё
-
+    
     // end apartments
-
+    
     // Begin Modal thisApartment
     .modal.fade.thisApartment#thisApartment
         .modal-dialog
@@ -226,7 +242,7 @@ block content
                                 .apartments__content
                                     .apartments__title
                                         span.modal_title_js 
-
+    
                                     .apartments__row
                                         .apartments__col
                                             span.modal_m2_js
@@ -234,15 +250,15 @@ block content
                                         .apartments__col
                                             span.modal_ft_js
                                             span  фт2
-
+    
                                     .apartments__row
                                         .apartments__col
                                             span.modal_aed_js
                                         .apartments__col
                                             span.modal_dollar_js
-
-
-
+    
+    
+    
                         .thisApartment__right
                             .section__title.mobile
                                 span Узнайте подробнее<br> об этих апартаментах
@@ -256,7 +272,7 @@ block content
                                     form.form(action="send.php")
                                         input(type="hidden" name="subject" value="форма в футоре")
                                         input(type="hidden" name="notspam" value="")
-
+    
                                         .form__row
                                             input(type="text" placeholder="Имя")
                                         .form__row
@@ -268,20 +284,20 @@ block content
                                                 .messenger__list
                                                     a.messenger__link.messenger__link_whatsapp(href="#") Whatsapp
                                                     a.messenger__link.messenger__link_telegram(href="#") Telegram
-
-
+    
+    
                                         .form__row
                                             .button
                                                 button.btn(type="submit") Отправить заявку
-
+    
                                         .form__row.mb_0
                                             .form__text
                                                 span Нажимая на кнопку вы соглашаетесь с условиями обработки<br> данных и политикой конфиденциальности
-
+    
                                 // end form
-
+    
     // End modal thisApartment
-
+    
     // begin feedback
     section.feedback.section
         .container_center
@@ -290,12 +306,12 @@ block content
                     span Заинтересовал один<br>из предложенных лотов?
                 .section__desc
                     p Оставьте свои контактные данные, и мы свяжемся с вами,<br> чтобы рассказать подробнее о выбранном лоте и помочь<br> оформить бронирование по актуальной стоимости
-
+    
                 .manager.mobile
                     .manager__content
                         .manager__img.img
                             img(src="../img/manager.webp", alt="alt")
-
+    
                         .manager__info
                             .manager__name
                                 span Анна
@@ -303,15 +319,15 @@ block content
                                 span менеджер проекта<br>«Название проекта»
                     .manager__masc.img
                         img(src="../img/phone.webp", alt="alt")
-
-
+    
+    
                 .feedback__form
                     // begin form
                     .form__content
                         form.form.form_grid(action="send.php")
                             input(type="hidden" name="subject" value="форма в футоре")
                             input(type="hidden" name="notspam" value="")
-
+    
                             .form__row
                                 input(type="text" placeholder="Имя")
                             .form__row
@@ -326,23 +342,23 @@ block content
                                     .messenger__list
                                         a.messenger__link.messenger__link_whatsapp(href="#") Whatsapp
                                         a.messenger__link.messenger__link_telegram(href="#") Telegram
-
+    
                             .form__row.form__row_full.mb_0
                                 .form__text
                                     span Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности
-
+    
                     // end form
-
-
+    
+    
             .feedback__img.img.desktop
                 img(src="../img/feedback.webp", alt="alt")
-
+    
     // end feedback
-
+    
     // begin decoration
     section#decoration.decoration.section
         .container_center
-
+    
             .decoration__row
                 .decoration__img.img
                     img(src="../img/decoration.jpg", alt="alt")
@@ -352,16 +368,16 @@ block content
                     .section__desc
                         p Элитная недвижимость в Дубаи — это возможность приобрести действительно эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса. Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни услугам, включая рестораны, магазины, развлекательные центры и многое другое.
                         p Все элитные дома в Дубае отличаются безупречным качеством, а также высоким уровнем комфорта.
-
+    
             .decoration__row
                 .decoration__img.img
                     img(src="../img/decoration_sm.jpg", alt="alt")
                 .decoration__content
                     .section__desc
                         p Элитная недвижимость в Дубаи — это возможность приобрести действительно эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса. Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни услугам, включая рестораны, магазины, развлекательные центры и многое другое.
-
+    
     // end decoration
-
+    
     // begin payment
     section#payment.payment.section
         .container_center
@@ -389,7 +405,7 @@ block content
                                     .table__col
                                         span=item
                         .table__body
-
+    
                             .table__row
                                 .table__col
                                     span При бронировании
@@ -397,10 +413,10 @@ block content
                                     span В день бронирования
                                 .table__col
                                     span 20%
-
+    
                             each item in ['', '', '', '', '', '', '', ]
-
-
+    
+    
                                 .table__row
                                     .table__col
                                         span 2 взнос
@@ -408,7 +424,7 @@ block content
                                         span 15 марта 2023
                                     .table__col
                                         span 10%
-
+    
                 .payment__form
                     // begin form
                     .form__content
@@ -417,24 +433,24 @@ block content
                         form.form(action="send.php")
                             input(type="hidden" name="subject" value="форма в футоре")
                             input(type="hidden" name="notspam" value="")
-
+    
                             .form__row
                                 input(type="text" placeholder="Имя")
                             .form__row
                                 input(type="number" required placeholder="+").tel
-
+    
                             .form__row
                                 .button
                                     button.btn(type="submit") Узнать подробнее
-
+    
                             .form__row.mb_0
                                 .form__text
                                     span Нажимая на кнопку вы соглашаетесь с условиями обработки<br> данных и политикой конфиденциальности
-
+    
                     // end form
-
+    
     // end payment
-
+    
     // begin location
     section#location.location.section
         .container_center
@@ -450,14 +466,14 @@ block content
                     img(src="../img/location_bg.webp", alt="alt")
                 .slide__bird.desktop.img(data-aos="fade-left")
                     img(src="../img/bird.webp", alt="alt")
-
+    
         .slide__nav.mobile
             .slide__slider.slide_js
             .slide__label
                 span Прогуляйтесь
-
+    
         .container_center
-
+    
             .location__row
                 .section__title(data-aos="fade-up")
                     span В пешей доступности
@@ -472,7 +488,7 @@ block content
                                 .location__time
                                     i.icon_man
                                     span 5 мин
-
+    
             .location__row
                 .section__title(data-aos="fade-up")
                     span До популярных локаций
@@ -487,14 +503,14 @@ block content
                                 .location__time
                                     i.icon_car
                                     span 5 мин
-
-
+    
+    
             .location__form
                 .section__title.mobile
                     span Хотите узнать подробнее о локации?
                 .section__desc.mobile
                     p Укажите ваш номер телефона, и мы проведем для вас персональную экскурсию по району<br>и познакомим с ближайшей инфраструктурой. Вживую или в дистанционном формате
-
+    
                 // begin form
                 .form__content
                     .section__title.desktop(data-aos="fade-up")
@@ -504,7 +520,7 @@ block content
                     form.form.form_row(action="send.php")
                         input(type="hidden" name="subject" value="форма в футоре")
                         input(type="hidden" name="notspam" value="")
-
+    
                         .form__row
                             input(type="text" placeholder="Имя")
                         .form__row
@@ -512,15 +528,15 @@ block content
                         .form__row
                             .button
                                 button.btn(type="submit") Записаться на экскурсию
-
+    
                         .form__row.form__row_full.mb_0
                             .form__text
                                 span Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности
-
+    
                 // end form
-
+    
     // end location
-
+    
     // begin developer
     section#developer.developer.section
         .container_center
@@ -531,7 +547,7 @@ block content
                     span DAMAC Properties — один<br>из крупнейших застройщиков ОАЭ
                 .section__desc.desktop
                     p Элитная недвижимость в Дубаи — это возможность приобрести действительно эксклюзивное жилье, которое станет настоящим украшением вашего дома или офиса. Вы сможете любоваться видами на море, находясь при этом в тишине и покое. Находясь в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни услугам, включая рестораны, магазины, развлекательные центры и многое другое.
-
+    
                 .developer__list
                     each item in [{number: '3', desc: 'место по объёму<br>рынка ОАЭ'},{number: '47', desc: 'проектов<br>реализовано'},{number: '1990', desc: 'год основания<br>компании'},]
                         .developer__item
@@ -542,26 +558,26 @@ block content
             .developer__bottom
                 .developer__content
                     span Находясь в центре Дубая, вы имеете доступ ко всем необходимым для комфортной жизни услугам, включая рестораны, магазины, развлекательные центры и многое другое.
-
+    
                 .founder
                     .founder__img.img
                         img(src="../img/founder.webp", alt="alt")
-
+    
                     .founder__content
-
+    
                         .founder__info
                             .founder__name
                                 span Зарема Кудусовна
                             .founder__desc
                                 span Основатель компании DAMAC Properties 
-
+    
                         .founder__caption.img
                             img(src="../img/caption.svg", alt="alt")
                             .founder__pen.img.desktop(data-aos="fade-left")
                                 img(src="../img/pen.webp", alt="alt")
-
+    
     // end developer
-
+    
     // begin news
     section#news.news.section
         .container_center
@@ -571,7 +587,7 @@ block content
                 .swiper.news_swiper_js
                     .swiper-wrapper
                         each item in [{title: 'Заголовок новости<br>номер один в две строки', text: 'В Дубае есть еще одно место, которое заслуживает внимания. Это небоскреб «Башня». Архитектором этого объекта является американский архитектор Рэм Колхаас. «Башня», построенная в виде полумесяца, представляет собой высотную постройку с большим количеством этажей. Небоскреб был возведен в Дубае в 2005 году.'}, {title: 'Заголовок новости', text: 'В Дубае есть еще одно место, которое заслуживает внимания. Это небоскреб «Башня». Архитектором этого объекта является американский архитектор Рэм Колхаас.'}, {title: 'Заголовок новости<br>номер один в две строки', text: 'Заголовок новости<br>номер один в две строки'}, {title: 'Заголовок новости', text: 'В Дубае есть еще одно место, которое заслуживает внимания.'}, {title: 'Заголовок новости<br>номер один в две строки', text: 'Заголовок новости<br>номер один в две строки'}, {title: 'Это небоскреб «Башня»', text: 'В Дубае есть еще одно место, которое заслуживает внимания. Это небоскреб «Башня». Архитектором этого объекта является американский архитектор Рэм Колхаас. «Башня», построенная в виде полумесяца, представляет собой высотную постройку с большим количеством этажей. Небоскреб был возведен в Дубае в 2005 году.'}]
-
+    
                             .swiper-slide
                                 .news__item
                                     .news__title 
@@ -580,14 +596,14 @@ block content
                                         span=item.text
                                     .news__date
                                         span 10 января 2023
-
+    
                 .swiper-label
                     span тяните
-
-
-
+    
+    
+    
     // end news
-
+    
     // begin feedback
     section.feedback.section
         .container_center
@@ -596,12 +612,12 @@ block content
                     span Остались вопросы по проекту?
                 .section__desc
                     p Оставьте свои контактные данные, и мы свяжемся <br> с вами, чтобы ответить на ваши вопросы
-
+    
                 .manager.mobile
                     .manager__content
                         .manager__img.img
                             img(src="../img/manager.webp", alt="alt")
-
+    
                         .manager__info
                             .manager__name
                                 span Анна
@@ -609,15 +625,15 @@ block content
                                 span менеджер проекта<br>«Название проекта»
                     .manager__masc.img
                         img(src="../img/phone.webp", alt="alt")
-
-
+    
+    
                 .feedback__form
                     // begin form
                     .form__content
                         form.form.form_grid(action="send.php")
                             input(type="hidden" name="subject" value="форма в футоре")
                             input(type="hidden" name="notspam" value="")
-
+    
                             .form__row
                                 input(type="text" placeholder="Имя")
                             .form__row
@@ -632,15 +648,15 @@ block content
                                     .messenger__list
                                         a.messenger__link.messenger__link_whatsapp(href="#") Whatsapp
                                         a.messenger__link.messenger__link_telegram(href="#") Telegram
-
+    
                             .form__row.form__row_full.mb_0
                                 .form__text
                                     span Нажимая на кнопку вы соглашаетесь с условиями обработки данных и политикой конфиденциальности
-
+    
                     // end form
-
-
+    
+    
             .feedback__img.img.desktop
                 img(src="../img/feedback.webp", alt="alt")
-
+    
     // end feedback

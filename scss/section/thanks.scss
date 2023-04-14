@@ -1,0 +1,38 @@
+.thanks {
+    position: relative;
+    border: 1px solid #000;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        @media (min-width: 768px) {
+            width: 37.5em;
+
+        }
+
+        .btn {
+            width: 21.25em;
+        }
+    }
+
+    &__btn {
+        margin-top: 4.375em;
+        text-align: center;
+    }
+
+    &__licence {
+        position: absolute;
+        bottom: 2.875em;
+        left: 50%;
+        transform: translateX(-50%);
+        letter-spacing: 0.02em;
+
+        span {
+            font-size: 0.625em;
+            font-weight: 600;
+            color: rgba($main_color, 0.5);
+        }
+    }
+}

@@ -2626,7 +2626,7 @@ body {
   margin-bottom: 1.5625em;
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 501px) {
   .developer__content {
     line-height: 1.487;
     width: 40.625em;
@@ -2838,6 +2838,39 @@ body {
   .news .swiper-label {
     margin: 0 0 0 69em;
   }
+}
+
+.thanks {
+  position: relative;
+  border: 1px solid #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .thanks__content {
+    width: 37.5em;
+  }
+}
+.thanks__content .btn {
+  width: 21.25em;
+}
+.thanks__btn {
+  margin-top: 4.375em;
+  text-align: center;
+}
+.thanks__licence {
+  position: absolute;
+  bottom: 2.875em;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 0.02em;
+}
+.thanks__licence span {
+  font-size: 0.625em;
+  font-weight: 600;
+  color: rgba(32, 48, 64, 0.5);
 }
 
 .footer {
@@ -3580,8 +3613,8 @@ input[type=number] {
 .modal-close {
   position: absolute;
   text-decoration: none;
-  right: 0.5em;
-  top: 0.5em;
+  right: 1.25em;
+  top: -2.5em;
   z-index: 1;
   color: rgba(255, 255, 255, 0.2);
 }
